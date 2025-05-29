@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="message-header">
+            <button id="return-btn">Return</button>
+            <h2 id="friend-name">Chat with Friend</h2>
+        </div>
+        <div class="msg-page" id="msg-page">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+        <div class="message-bottom">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const friendName = localStorage.getItem('currentChat');
+        document.getElementById('friend-name').innerText = `Chat with ${friendName}`;
+
+        // Load messages from localStorage
+        const loadMessages = () => {
+            const messages = JSON.parse(localStorage.getItem(friendName)) || [];
+            const msgPage = document.getElementById('msg-page');
+            messages.forEach(message => {
+                const msgElement = document.createElement('div');
+                msgElement.classList.add('outgoing-msg');
+                msgElement.innerHTML = `<div class="msg">${message.text}</div><span class="time">${message.time}</span>`;
+                msgPage.appendChild(msgElement);
+            });
+            msgPage.scrollTop = msgPage.scrollHeight; // Scroll to the bottom
+        };
+
+        // Return button functionality
+        document.getElementById('return-btn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to chat list
+        });
+
+        // Send button functionality
+        document.getElementById('send-btn').addEventListener('click', function() {
+            const input = document.getElementById('message-input');
+            const msgPage = document.getElementById('msg-page');
+
+            if (input.value.trim() !== '') {
+                const message = {
+                    text: input.value,
+                    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                };
+
+                // Save message to localStorage
+                const messages = JSON.parse(localStorage.getItem(friendName)) || [];
+                messages.push(message);
+                localStorage.setItem(friendName, JSON.stringify(messages));
+
+                // Append message to chat
+                const outgoingMsg = document.createElement('div');
+                outgoingMsg.classList.add('outgoing-msg');
+                outgoingMsg.innerHTML = `<div class="msg">${message.text}</div><span class="time">${message.time}</span>`;
+                msgPage.appendChild(outgoingMsg);
+                input.value = '';
+                msgPage.scrollTop = msgPage.scrollHeight; // Scroll to the bottom
+            }
+        });
+
+        // Load messages when the page is loaded
+        loadMessages();
+    </script>
+</body>
+</html>

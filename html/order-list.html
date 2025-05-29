@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>order list</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" h>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/imp.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/orderlist.css">
+</head>
+<body>
+    
+
+  
+    
+<header>
+  <div class="logo"><div>
+      <img src="../img/ICON WHITE.png"   class="logopic"></div> 
+      <div class="logoname">INFINITY MARKET PLACE</div>
+  </div>
+
+  <div class="left-header">
+      <ul>
+          <li><a href="../html/seller's-page-home.html">Home</a></li>
+          
+          <li><a href="index.html">Store</a></li>
+          <li><a href="../html/discovery.html">Discovery</a></li>
+          <li><a href="../html/upgrade-plan.html">Upgrade Plan</a></li>
+          <li><a href="../html/user-profile.html">Profile</a></li>
+          <li> <img class="picc" src="../img/6215524e7d3b34c0af4a4ce51e1fd997.jpg" alt=""> </li>
+         
+      </ul>
+  </div>
+</header>
+
+
+    
+<div class="menu-and-flag">
+    <div>
+        
+<menu class="menuu">
+    <div class="right-menu">menu</div>
+    <div class="arrow"><i class="fa fa-angle-down" aria-hidden="true" id="angle-down"></i></div>
+    <div class="search-item">  
+      <input id="search-input" type="text" placeholder="Search...">
+    </div>
+</menu>
+    </div>
+
+    
+</div>
+
+
+<script>
+
+
+  // Get the search input element
+const searchInput = document.getElementById('search-input');
+
+// Define the search function
+function searchOrders(input) {
+    // Get all the page contents (tables)
+    const pageContents = document.querySelectorAll('.page-content');
+
+    // Loop through each page content
+    pageContents.forEach(content => {
+        // Get all the rows in the current table
+        const rows = content.querySelectorAll('tr');
+        let found = false;
+
+        // Loop through each row (skipping the header)
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            let rowVisible = false;
+
+            // Check each cell for the search input
+            cells.forEach(cell => {
+                if (cell.textContent.toLowerCase().includes(input.toLowerCase())) {
+                    rowVisible = true;
+                }
+            });
+
+            // Show or hide the row based on search result
+            row.style.display = rowVisible ? '' : 'none';
+            found = found || rowVisible;
+        });
+
+        // If no rows are found, hide the entire table
+        content.style.display = found ? '' : 'none';
+    });
+}
+
+// Add an event listener to the search input element
+searchInput.addEventListener('input', (e) => {
+    searchOrders(e.target.value);
+});
+</script>
+
+
+
+
+
+
+
+<!--
+<script>
+
+// Get the search input element
+const searchInput = document.getElementById('search-input');
+
+// Define the search function
+function searchOrders(input) {
+    // Get all the page contents (tables)
+    const pageContents = document.querySelectorAll('.page-content');
+
+    // Loop through each page content
+    pageContents.forEach(content => {
+        // Get all the rows in the current table
+        const rows = content.querySelectorAll('tr');
+        let found = false;
+
+        // Loop through each row (skipping the header)
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            let rowVisible = false;
+
+            // Check each cell for the search input
+            cells.forEach(cell => {
+                if (cell.textContent.toLowerCase().includes(input.toLowerCase())) {
+                    rowVisible = true;
+                }
+            });
+
+            // Show or hide the row based on search result
+            row.style.display = rowVisible ? '' : 'none';
+            found = found || rowVisible;
+        });
+
+        // If no rows are found, hide the entire table
+        content.style.display = found ? '' : 'none';
+    });
+}
+
+// Add an event listener to the search input element
+searchInput.addEventListener('input', (e) => {
+    searchOrders(e.target.value);
+});
+
+</script>
+-->
+
+
+
+<div class="open-menu">
+  <div class="main-menu">
+      <div class="right-menu" style="text-align: center;">menu</div>
+      <div class="arrow"><i class="fa fa-angle-up" aria-hidden="true" id="angle-up"></i></div>
+      <div class="search-item"><input type="text" placeholder=" type to search"></div>
+  
+  </div>
+      
+  <div class="open-menu-list">
+      <div class="first-list">
+             <a class="up-list" href="top-rated.html">
+              <div class="list-icon">
+             
+  <i class="fa fa-line-chart" aria-hidden="true"></i>
+              </div>
+             <div class="list-name">
+                 Top rated
+              </div>
+             </a>
+             <a class="up-list" href="../html/people's-choice.html" >
+              <div class="list-icon">
+             <img src="../img/check_ring_round_duotone_line.png" alt="">
+              </div>
+             <div class="list-name" style="color: blueviolet;">
+                 People's choice
+              </div>
+             </a>
+             <a class="up-list" href="../html/top-brand.html">
+              <div class="list-icon">
+               <img src="../img/Star 1.png" alt="">
+              </div>
+             <div class="list-name">
+                 Top brands
+              </div>
+             </a>
+  
+          </div>
+  
+          <div class="categories">
+              <ul>
+                 <li><a href="#"><h4>CATEGORIES</h4></a></li>
+                 <li><a href="#">Wears</a></li>
+                 <li><a href="#">Electronics</a></li>
+                 <li><a href="#">Gadgets</a></li>
+                 <li><a href="#">home decor</a></li>
+                 <li><a href="#">Cosmetics</a></li>
+                 <li><a href="#">Beauty & wash</a></li>
+                
+              </ul>
+          </div>
+  
+          <div class="discovery">
+              <li><a href="../html/discovery.html" id="dis">#DISCOVERY CONTENTS</a></li>
+              <li><a href="#">#Wears #Electronics</a></li>
+          </div>
+                 
+          <div class="first-list" style="margin-top: 25px;">
+        
+              <a class="up-list" href="../html/analysis.html">
+               <div class="list-icon">
+               <img src="" alt="">##
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+             Analysis
+               </div>
+              </a>
+              <a class="up-list" href="../html/upgrade-plan.html">
+               <div class="list-icon">
+               <img src="" alt="">##
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+             Upgrade Plan
+               </div>
+              </a>
+              <a class="up-list" href="../html/order-list.html">
+               <div class="list-icon">
+               <img src="" alt="">##
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+              Sell
+               </div>
+              </a>
+              <a class="up-list" href="../html/seller's-page-home.html">
+               <div class="list-icon">
+               <img src="" alt="">##
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+              Store
+               </div>
+              </a>
+              <a class="up-list" href="../html/user-profile.html">
+               <div class="list-icon">
+               <img src="../img/home.png" alt="">
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+               Profile
+               </div>
+              </a>
+              <a class="up-list" href="../html/transaction-seller.html">
+               <div class="list-icon">
+              <img src="../img/Paper_light.png" alt="">
+               </div>
+              <div class="list-name">
+                  History
+               </div>
+              </a>
+             
+   
+           </div>
+          <div class="first-list" style="margin-top: 30px;">
+                <h6>INFO</h6>
+              <a class="up-list" href="../html/seller-chart.html">
+               <div class="list-icon">
+               <img src="../img/Chat_alt_3.png" alt="">
+               </div>
+              <div class="list-name">
+              chat
+               </div>
+              </a>
+              <a class="up-list" href="../html/transaction-seller.html">
+               <div class="list-icon">
+               <img src="../img/Bell_pin.png" alt="">
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+                  Notification
+               </div>
+              </a>
+   
+           </div>
+  
+           <div class="first-list" style="margin-top: 30px;">
+           <h6>ACCOUNT</h6>
+              <a class="up-list" href="../html/switch-account.html">
+               <div class="list-icon">
+               <img src="../img/folder.png" alt="">
+               </div>
+              <div class="list-name">
+             Switch Account
+               </div>
+              </a>
+              <a class="up-list" href="#">
+               <div class="list-icon">
+               <img src="../img/folder.png" alt="">
+               </div>
+              <div class="list-name">
+                 Help
+               </div>
+              </a>
+   
+           </div>
+           <div class="first-list" style="margin-top: 60px;">
+          
+              <a class="up-list" href="#">
+               <div class="list-icon">
+             <img src="../img/cog.png" alt="">
+               </div>
+              <div class="list-name">
+           Setting
+               </div>
+              </a>
+              <a class="up-list" href="#">
+               <div class="list-icon">
+               <img src="../img/logout.png" alt="">
+               </div>
+              <div class="list-name">
+              Logout
+               </div>
+              </a>
+   
+           </div>
+  </div>
+  
+                  </div>
+
+
+
+
+
+<div class="orderr" style="text-align: center; ">
+    <div class="orderrr"><h1>Order list</h1></div>
+</div>
+
+      
+      <!-- Pagination container -->
+<div class="pagination" id="scrollContainer" >
+  <!-- Page boxes -->
+  <div class="page-box active" data-page="1">
+    
+        <div class="active-order">Active order:</div>
+        <div class="order-amt" >200</div>  
+  </div>
+
+  <div class="page-box" data-page="2">
+    <div>Unfulfilled:</div>
+    <div class="Unfulfilled">10,109</div>
+  </div>
+
+  <div class="page-box" data-page="3">
+        <div>Pending:</div>
+        <div class="pending">1000</div>
+    
+  </div>
+
+  <div class="page-box" data-page="4">
+    <div>Fulfilled:</div>
+    <div class="pending">60</div>
+
+  </div>
+  <!-- Add more page boxes as needed -->
+</div>
+
+<!-- Content container -->
+<div class="content" style="position: relative; top: 160px;">
+  <!-- Page content will be displayed here -->
+  <div class="page-content active" data-page="1">
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Date </th>
+            <th>Customers</th>
+            <th>Fulfilment</th>
+            <th>Cost</th>
+            <th>Status</th>
+        </tr>
+
+        <tr >
+            <td>03849</td>
+            <td>2022-01-01</td>
+            <td>
+                <div class="cust-namee">
+                    <div class="profile-img"><img src="" alt=""></div>
+                    <div class="nammm">
+                        <div class="name-cust">mkovur</div>
+
+                    </div>
+                </div>
+            </td>
+            <td><div class="kfk">Fulfilled</div></td>
+            <td>$100</td>
+            <td><div class="status">Fulfilled</div></td>
+          
+           
+            </tr>
+    </table>
+  </div>
+  <div class="page-content" data-page="2">
+    <table>
+      <tr>
+          <th>Order ID</th>
+          <th>Date </th>
+          <th>Customers</th>
+          <th>Fulfilment</th>
+          <th>Cost</th>
+          <th>Status</th>
+      </tr>
+
+      <tr class="rlro">
+          <td>03849</td>
+          <td>2022-01-01</td>
+          <td>
+              <div class="cust-namee">
+                  <div class="profile-img"><img src="" alt=""></div>
+                  <div class="nammm">
+                      <div class="name-cust">mkovur</div>
+
+                  </div>
+              </div>
+          </td>
+          <td><div class="unfulfilled">unFulfilled</div></td>
+          <td>$100</td>
+          <td><div class="unfulfilled" id="null-paid">null</div></td>
+
+      </tr>
+  </table>
+  </div>
+  <div class="page-content" data-page="3">
+    <table>
+      <tr>
+          <th>Order ID</th>
+          <th>Date </th>
+          <th>Customers</th>
+          <th>Fulfilment</th>
+          <th>Cost</th>
+          <th>Status</th>
+      </tr>
+
+      <tr class="rlro">
+          <td>03849</td>
+          <td>2022-01-01</td>
+          <td>
+              <div class="cust-namee">
+                  <div class="profile-img"><img src="" alt=""></div>
+                  <div class="nammm">
+                      <div class="name-cust">mkovur</div>
+
+                  </div>
+              </div>
+          </td>
+          <td><div class="pendingg">pending</div></td>
+          <td>$100</td>
+          <td><div class="pendingg" id="pending-paid">pending</div></td>
+
+      </tr>
+  </table>
+  </div>
+  <div class="page-content" data-page="4">
+    <table>
+      <tr>
+          <th>Order ID</th>
+          <th>Date </th>
+          <th>Customers</th>
+          <th>Fulfilment</th>
+          <th>Cost</th>
+          <th>Status</th>
+      </tr>
+
+      <tr class="rlro">
+          <td>03849</td>
+          <td>2022-01-01</td>
+          <td>
+              <div class="cust-namee">
+                  <div class="profile-img"><img src="" alt=""></div>
+                  <div class="nammm">
+                      <div class="name-cust">mkovur</div>
+
+                  </div>
+              </div>
+          </td>
+          <td><div class="fulfilled">Fulfilled</div></td>
+          <td>$100</td>
+          <td><div  class="fulfilled" id="paid">paid</div></td>
+
+      </tr>
+  </table>
+  </div>
+  <!-- Add more page content as needed -->
+</div>
+
+
+<script>
+    // Get the pagination container and page boxes
+const pagination = document.querySelector('.pagination');
+const pageBoxes = document.querySelectorAll('.page-box');
+
+// Get the content container and page content
+const content = document.querySelector('.content');
+const pageContent = document.querySelectorAll('.page-content');
+
+// Add event listener to each page box
+pageBoxes.forEach((pageBox, index) => {
+  pageBox.addEventListener('click', () => {
+    // Remove active class from all page boxes and page content
+    pageBoxes.forEach((box) => box.classList.remove('active'));
+    pageContent.forEach((content) => content.classList.remove('active'));
+
+    // Add active class to the clicked page box and corresponding page content
+    pageBox.classList.add('active');
+    pageContent[index].classList.add('active');
+  });
+});
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>image slide</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <!--link for swiperJS css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+
+    <style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+   
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 6, 114);
+    }
+     
+
+     .slider-wrapper {
+      width: 700px;
+      overflow: hidden;
+      padding: 20px;
+     }
+
+     
+     .card-list  .card-item{
+        display: flex;
+        flex-direction: column;     
+        align-items: center;
+        color: white;
+        border-radius: 8px;
+     }
+      
+
+     .slider-wrapper .swiper-paginantion-bullet {
+        background-color: #fff;
+        height: 15px;
+        aspect-ratio: 1;
+     }
+
+    .slider-wrapper .swiper-slide-button{
+      color: #fff;
+      margin-top: -50px;
+      }
+    .slider-wrapper .swiper-slide-button:hover{
+      color: #a09c9c;
+     }
+
+     @media  (max-width: 768px) {
+        .slider-wrapper{
+            margin: 0 10px 40px;
+        }
+
+        .slider-wrapper .swiper-slide-button{
+            display: none;
+        }
+     }
+
+   
+    </style>
+</head>
+<body>
+
+<!--image slider-->
+    <div class="containter swiper">
+        <div class="slider-wrapper">
+           <div class="card-list swiper-wrapper">
+            <div class="card-item swiper-slide">
+                <img src="Group 9009.png" alt="" class="user-image">
+               
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="Group 9010.png" alt="" class="user-image">
+               
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="Group 9013.png" alt="" class="user-image">
+               
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="Group 9016.png" alt="" class="user-image">
+               
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="Group 9017.png" alt="" class="user-image">
+               
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="Frame 427319741.png" alt="" class="user-image">
+               
+            </div>
+     
+           </div>
+
+
+
+           <div class="swiper-pagination"></div>
+  <div class="swiper-slide-button swiper-button-prev"></div>
+  <div class="swiper-slide-button swiper-button-next"></div>
+
+  <!-- If we need scrollbar 
+  <div class="swiper-scrollbar"></div>
+-->
+        </div>
+    </div>
+    <!--link for swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+ </script>
+    <!--swiper link-->
+    <script src="swiper.js">
+
+    </script>
+</body> 
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>buyer's History</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/imp.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    height: auto;
+    background-color: rgb(117, 23, 211);
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px;
+    z-index: 1000000;
+}
+.logo{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.logopic{
+    height: 39.16px;
+    width: 41.26px;
+}
+.logoname{
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+@media all and (max-width:830px) {
+   
+   .logopic{
+       width: 22px;
+       aspect-ratio: 1;
+   }
+   .logoname{
+       font-weight: 400;
+       font-size: 16px;
+      
+   }
+
+
+   .left-header > ul > li:nth-child(1){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(2){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(3){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(4 ){
+     display: none;
+       
+       }
+  
+ /*  .left-header > ul > li:nth-child(7 ){
+     display: none;
+       
+       }*/
+  
+   .left-header > ul > li:nth-child(4 ){
+     display: none;
+       
+       }
+  
+ }
+
+ @media all and (max-width:500px) {
+
+  .reddd{
+   font-size: 8px;
+  }
+   .logoname{
+       font-weight: 400;
+       font-size: 6px;
+      
+   }
+   .left-header > ul > li:nth-child(5){
+      font-size: 8px;
+   
+   }
+   .left-header li .picc{
+     width: 20px;
+   }
+}
+
+ @media all and (max-width:300px) {
+  
+
+  .reddd{
+   font-size: 4px;
+   padding: 0;
+   margin: 0;
+  }
+   .logoname{
+       font-weight: 400;
+       font-size: 4px;
+   }
+}
+ 
+.left-header ul li > a{
+   color: white;
+}
+
+.left-header > ul {
+   display: flex;
+list-style-type:none;
+align-items: center;
+
+
+font-weight: 800 ;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li > .picc{
+width: 36px;
+aspect-ratio: 1;
+border-radius: 50%;
+border: solid white 1px;
+
+
+}
+
+.left-header > ul > li:nth-child(1){
+border-radius: 4px;
+background-color:  rgba(247, 130, 35, 1);
+
+}
+.left-header > ul > li:nth-child(1):hover{
+   color: rgb(255, 210, 168);
+   transform: scale(1);
+
+}
+
+
+
+.left-header > ul > li a{
+padding-right: 4px;
+padding: 6px;
+
+margin: 4px;
+transition: all .4s;
+
+} 
+
+.left-header > ul > li {
+
+padding: 4px;
+
+
+transition: all .4s;
+
+} 
+.left-header > ul > li:hover{
+   color: rgb(241, 125, 10);
+   transform: scale(1.1);  
+}
+.left-header > ul > li a:hover{
+   color: rgb(241, 125, 10);
+   transform: scale(1.1);  
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.flag{
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    z-index: 100000;
+  }
+
+
+menu{
+   display: flex;
+   background-color:rgba(250, 250, 250, 0.498) ;
+   border-radius: 10px;
+   width: 238px;
+   height: 54px;
+   top: 80px;
+   left: 0;
+   position: fixed;
+   justify-content: space-around;
+   align-items: center;
+   z-index: 1000000;
+  
+
+
+}
+.right-menu{
+border: solid 1px  rgba(112, 46, 178, 0.6);
+border-radius: 8px ;
+background-color: rgba(255, 255, 255, 1);
+height: 23px;
+width: 50px;
+font-size: x-small;
+font-weight: 600;
+text-align: center;
+transition: all .9s;
+}
+.right-menu:hover{
+transform: scaleX(0.9);
+}
+.search-item > input{
+width: 128px;
+height: 24.27px;
+border-radius: 7px;
+font-size: smaller;
+padding: 4px;
+outline: none;
+border: solid 1px rgba(112, 46, 178, 0.6);
+transition: all 1s ;
+}
+.search-item > input:focus{
+border: solid 1.8px rgba(65, 3, 77, 0.6);
+transform: scaleX(1.1);
+}
+
+.search-item > input::placeholder{
+font-size: smaller;
+text-align: center;
+}
+.arrow > #angle-down{
+transition: all 1s;
+font-size: x-large;
+}
+.arrow > #angle-down:hover{
+transform: translateY(10px);
+}
+.arrow > #angle-up{
+transition: all 1s;
+font-size: x-large;
+}
+.arrow > #angle-up:hover{
+transform: translateY(-10px);
+}
+
+
+.open-menu{
+   width: 260px;
+   height: 400px;
+   top: 90px;
+   left: 0px;
+   background: rgba(250, 250, 250, 1);
+  
+   border-radius:10px;
+   z-index: 100000;
+   position: fixed;
+   overflow: hidden;
+   overflow: scroll;
+ 
+}
+.open-menu::-webkit-scrollbar-track{
+ background-color:  rgba(250, 250, 250, 1);
+}
+.open-menu::-webkit-scrollbar-thumb{
+ background-color: rgb(0, 0, 0);
+
+}
+.open-menu::-webkit-scrollbar{
+   background-color: rgb(255, 255, 255);
+   width: 12px;
+   
+   
+ 
+}
+.main-menu{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 8px;
+}
+
+.first-list{
+   padding: 9px;
+}
+
+.first-list > .up-list{
+   display: flex;
+   color: black;
+  text-decoration: none;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: px;
+  padding-left: 6px;
+}
+
+.categories ul > li,a{
+   list-style-type: none;
+   text-decoration: none;
+   color: black;
+   font-size: 16px;
+  font-weight: 600;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+.discovery li{
+  list-style-type: none;
+
+}
+.discovery{
+   padding-top: 20px;
+
+}
+
+.open-menu{
+   display: none;
+}
+
+.flag select{
+    position: fixed;
+    top: 80px;
+    right: 5%;
+    z-index: 1000;
+   
+  
+    
+}
+
+.profile-image img{
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border:  solid 1px black;
+    
+}
+
+
+th, td{
+    padding: 10px;
+}
+
+
+table{
+    width: 800px;
+   
+}
+
+table,  td{
+    border: 2px solid rgb(167, 167, 167);
+    border-collapse: collapse;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+
+}
+
+
+
+
+@media all and (max-width:820px) {
+    table{
+     width: 600px;
+    }
+
+
+}
+ 
+
+@media all and (max-width:620px) {
+    table{
+     width: 380px;
+    }
+
+    th{
+        font-size: x-small;
+    }
+    .rec-ped{
+        font-size: x-small;
+    }
+
+}
+ 
+ 
+
+@media all and (max-width:390px) {
+    table{
+     width: auto;
+    }
+
+
+}
+ 
+
+</style>
+
+</head>
+<body>
+
+    <header>
+        <div class="logo"><div>
+            <img src="../img/ICON WHITE.png"   class="logopic"></div> 
+            <div class="logoname">INFINITY MARKET PLACE</div>
+        </div>
+     
+        <div class="left-header">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discovery</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Cart</a></li>
+                <li ><a href="#" class="reddd" >Log in/Sign up</a></li>
+                <li> <img class="picc" src="../img/6215524e7d3b34c0af4a4ce51e1fd997.jpg" alt=""> </li>
+              
+            </ul>
+        </div>
+    </header>
+    
+    <div class="menu-and-flag">
+        <div>
+            
+    <menu class="menuu">
+        <div class="right-menu" style="text-align: center;">menu</div>
+        <div class="arrow"><i class="fa fa-angle-down" aria-hidden="true" id="angle-down"></i></div>
+        <div class="search-item"><input type="text" placeholder=" type to search"></div>
+    </menu>
+        </div>
+    
+        <div class="flag">
+       <img src="../img/flag-for-flag-nigeria.svg" alt="" style="width: 80px; aspect-ratio: 4/2;" >
+          
+        </div>
+    </div>
+    
+    
+    <div class="open-menu">
+    <div class="main-menu">
+        <div class="right-menu" style="text-align: center;">menu</div>
+        <div class="arrow"><i class="fa fa-angle-up" aria-hidden="true" id="angle-up"></i></div>
+        <div class="search-item"><input type="text" placeholder=" type to search"></div>
+    
+    </div>
+        
+    <div class="open-menu-list">
+        <div class="first-list">
+               <a class="up-list" href="#">
+                <div class="list-icon">
+               
+    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                </div>
+               <div class="list-name">
+                   Top rated
+                </div>
+               </a>
+               <a class="up-list" href="#" >
+                <div class="list-icon">
+               <img src="check_ring_round_duotone_line.png" alt="">
+                </div>
+               <div class="list-name" >
+                   People's choice
+                </div>
+               </a>
+               <a class="up-list" href="#">
+                <div class="list-icon">
+                 <img src="Star 1.png" alt="">
+                </div>
+               <div class="list-name">
+                   Top brands
+                </div>
+               </a>
+    
+            </div>
+    
+            <div class="categories">
+                <ul>
+                   <li><a href="#"><h4>CATEGORIES</h4></a></li>
+                   <li><a href="#">Wears</a></li>
+                   <li><a href="#">Electronics</a></li>
+                   <li><a href="#">Gadgets</a></li>
+                   <li><a href="#">home decor</a></li>
+                   <li><a href="#">Cosmetics</a></li>
+                   <li><a href="#">Beauty & wash</a></li>
+                  
+                </ul>
+            </div>
+    
+            <div class="discovery">
+                <li><a href="#" id="dis">#DISCOVERY CONTENTS</a></li>
+                <li><a href="#">#Wears #Electronics</a></li>
+            </div>
+                   
+            <div class="first-list" style="margin-top: 25px;">
+          
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="" alt="">##
+                 </div>
+                <div class="list-name" >
+                Sell
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="" alt="">##
+                 </div>
+                <div class="list-name" >
+                 Cart
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="home.png" alt="">
+                 </div>
+                <div class="list-name" style="color: blueviolet;">
+                 Profile
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                <img src="Paper_light.png" alt="">
+                 </div>
+                <div class="list-name">
+                    History
+                 </div>
+                </a>
+     
+             </div>
+            <div class="first-list" style="margin-top: 30px;">
+                  <h6>INFO</h6>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="Chat_alt_3.png" alt="">
+                 </div>
+                <div class="list-name">
+                chat
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="Bell_pin.png" alt="">
+                 </div>
+                <div class="list-name" >
+                    Notification
+                 </div>
+                </a>
+     
+             </div>
+    
+             <div class="first-list" style="margin-top: 30px;">
+             <h6>ACCOUNT</h6>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="folder.png" alt="">
+                 </div>
+                <div class="list-name">
+               Switch Account
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="folder.png" alt="">
+                 </div>
+                <div class="list-name">
+                   Help
+                 </div>
+                </a>
+     
+             </div>
+             <div class="first-list" style="margin-top: 60px;">
+            
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+               <img src="cog.png" alt="">
+                 </div>
+                <div class="list-name">
+             Setting
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="logout.png" alt="">
+                 </div>
+                <div class="list-name">
+                Logout
+                 </div>
+                </a>
+     
+             </div>
+    </div>
+    
+                    </div>
+    
+
+               
+                     <section style="position: relative; top: 200px; display: flex; justify-content: center;">
+                        <div class="history-main-box">
+
+                            <div class="transac-head"><h2 style="padding: 16px;">Transaction History</h2></div>
+
+
+                           
+                            <table class="pending-transaction">
+                                <div class="on-going"><h5 style="padding: 16px; color:  rgb(29, 149, 209);">on going transaction</h5></div>
+
+                                <tr>
+                                <th>Store name</th>
+                                <th>Transaction Status</th>
+                                <th>Rate the seller</th>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="store-namm" style="display: flex; gap: 20px; align-items: center; font-size: xx-small; font-weight: 700;">
+                                   
+                                        <div class="profile-image"><img src="" alt=""></div>
+                                        <div class="company-name">#</div>
+                        
+                                    </div>
+                                   
+                                </td>
+                               
+                                <td>
+                                    <div class="rec-ped" style="display: flex; justify-content: center; gap: 9px;">
+                                        <div><button class="Received" style="background-color: rgb(29, 149, 209); color: white; padding: 5px; border-radius: 4px; border: none;"> Received</button></div>
+                                        <div><button class="Pending"  style="background-color: red; color: white; padding: 5px; border-radius: 4px; border: none;">Pending</button></div>
+                                    </div>
+                                </td>
+                                <td>
+                                   <div class="star" data-rating-group="1" style="display: flex; align-items: center; justify-content: space-between; gap: 4px;">
+                                    <div><i class="fa fa-star-o star-rating" data-index="1" style="color: gold; cursor: pointer;"></i></div>
+                                    <div><i class="fa fa-star-o star-rating" data-index="2" style="color: gold; cursor: pointer;"></i></div>
+                                    <div><i class="fa fa-star-o star-rating" data-index="3" style="color: gold; cursor: pointer;"></i></div>
+                                    <div><i class="fa fa-star-o star-rating" data-index="4" style="color: gold; cursor: pointer;"></i></div>
+                                    <div><i class="fa fa-star-o star-rating" data-index="5" style="color: gold; cursor: pointer;"></i></div>
+                                     <div><p style="font-size: smaller; font-weight: 600;"></p></div>
+                                   </div>
+                                </td>
+                                </tr>
+                            </table>
+                            <table class="complete-transaction">
+                                <div class="on-going"><h5 style="padding: 16px; color:  rgb(29, 209, 110);">Transaction Completed</h5></div>
+
+                                <tr>
+                                <th>Store name</th>
+                                <th>Transaction Status</th>
+                                <th>Rate the seller</th>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="store-namm" style="display: flex; gap: 20px; align-items: center; font-size: xx-small; font-weight: 700;">
+                                   
+                                        <div class="profile-image"><img src="" alt=""></div>
+                                        <div class="company-name">#</div>
+                        
+                                    </div>
+                                   
+                                </td>
+                               
+                                <td>
+                                    <div class="rec-ped" style="display: flex; justify-content: center; gap: 9px;">
+                                        <div><button class="Received" style="background-color: rgb(29, 209, 110); color: white; padding: 5px; border-radius: 4px; border: none;"> Completed</button></div>
+                                        <div> </div>
+                                    </div>
+                                </td>
+                                <td>
+                                   <div class="star" data-rating-group="2" style="display: flex; align-items: center; justify-content: space-between; gap: 4px;">
+                                    <div><i class="fa fa-star-o star-rating" data-index="1" style="color: gold; cursor: pointer;"></i></div>
+                                    <div><i class="fa fa-star-o star-rating" data-index="2" style="color: gold; cursor: pointer;"></i></div>
+                                    <div><i class="fa fa-star-o star-rating" data-index="3" style="color: gold; cursor: pointer;"></i></div>
+                                    <div><i class="fa fa-star-o star-rating" data-index="4" style="color: gold; cursor: pointer;"></i></div>
+                                    <div><i class="fa fa-star-o star-rating" data-index="5" style="color: gold; cursor: pointer;"></i></div>
+                                     <div><p style="font-size: smaller; font-weight: 600;"></p></div>
+                                   </div>
+                                </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="see">
+
+                        </div>
+                     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.star-rating');
+            
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    // Toggle only the clicked star
+                    if (this.classList.contains('fa-star')) {
+                        this.classList.remove('fa-star');
+                        this.classList.add('fa-star-o');
+                    } else {
+                        this.classList.remove('fa-star-o');
+                        this.classList.add('fa-star');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

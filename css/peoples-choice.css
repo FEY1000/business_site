@@ -1,0 +1,40 @@
+
+/* Override select-options styles */
+.select-options {
+    position: absolute !important;
+    height: 150px;
+    overflow: scroll;
+    top: 60px !important;
+    left: 0;
+    display: none;
+    z-index: 10000;
+    width: min(250px, 90vw);
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Container positioning */
+.font {
+    position: relative;
+    width: auto;
+    margin: 0;
+}
+
+/* Category header container */
+.set-cat {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0 0;
+    padding-bottom: 5px;
+}
+
+/* Category header styling */
+.category-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>buyer's chart</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+ 
+    <script src="../js/jquery.js"></script>
+    <script src="../js/imp.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style>
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    height: auto;
+    background-color: rgb(117, 23, 211);
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px;
+    z-index: 1000000;
+}
+.logo{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.logopic{
+    height: 39.16px;
+    width: 41.26px;
+}
+.logoname{
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+@media all and (max-width:830px) {
+   
+   .logopic{
+       width: 22px;
+       aspect-ratio: 1;
+   }
+   .logoname{
+       font-weight: 400;
+       font-size: 16px;
+      
+   }
+
+
+   .left-header > ul > li:nth-child(1){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(2){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(3){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(4 ){
+     display: none;
+       
+       }
+  
+ /*  .left-header > ul > li:nth-child(7 ){
+     display: none;
+       
+       }*/
+  
+   .left-header > ul > li:nth-child(4 ){
+     display: none;
+       
+       }
+  
+ }
+
+ @media all and (max-width:500px) {
+
+  .reddd{
+   font-size: 8px;
+  }
+   .logoname{
+       font-weight: 400;
+       font-size: 6px;
+      
+   }
+   .left-header > ul > li:nth-child(5){
+      font-size: 8px;
+   
+   }
+   .left-header li .picc{
+     width: 20px;
+   }
+}
+
+ @media all and (max-width:300px) {
+  
+
+  .reddd{
+   font-size: 4px;
+   padding: 0;
+   margin: 0;
+  }
+   .logoname{
+       font-weight: 400;
+       font-size: 4px;
+   }
+}
+ 
+.left-header ul li > a{
+   color: white;
+}
+
+.left-header > ul {
+   display: flex;
+list-style-type:none;
+align-items: center;
+
+
+font-weight: 800 ;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li > .picc{
+width: 36px;
+aspect-ratio: 1;
+border-radius: 50%;
+border: solid white 1px;
+
+
+}
+
+.left-header > ul > li:nth-child(1){
+border-radius: 4px;
+background-color:  rgba(247, 130, 35, 1);
+
+}
+.left-header > ul > li:nth-child(1):hover{
+   color: rgb(255, 210, 168);
+   transform: scale(1);
+
+}
+
+
+
+.left-header > ul > li a{
+padding-right: 4px;
+padding: 6px;
+
+margin: 4px;
+transition: all .4s;
+
+} 
+
+.left-header > ul > li {
+
+padding: 4px;
+
+
+transition: all .4s;
+
+} 
+.left-header > ul > li:hover{
+   color: rgb(241, 125, 10);
+   transform: scale(1.1);  
+}
+.left-header > ul > li a:hover{
+   color: rgb(241, 125, 10);
+   transform: scale(1.1);  
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.flag{
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    z-index: 100000;
+  }
+
+
+menu{
+   display: flex;
+   background-color:rgba(250, 250, 250, 0.63) ;
+   border-radius: 10px;
+   width: 100px;
+   height: 54px;
+   top: 85px;
+   right: 2px;
+   position: fixed;
+   justify-content: space-around;
+   align-items: center;
+   z-index: 1000000;
+  
+
+
+}
+.right-menu{
+border: solid 1px  rgba(112, 46, 178, 0.6);
+border-radius: 8px ;
+background-color: rgba(255, 255, 255, 1);
+height: 23px;
+width: 50px;
+font-size: x-small;
+font-weight: 600;
+text-align: center;
+transition: all .9s;
+}
+.right-menu:hover{
+transform: scaleX(0.9);
+}
+.search-item > input{
+width: 128px;
+height: 24.27px;
+border-radius: 7px;
+font-size: smaller;
+padding: 4px;
+outline: none;
+border: solid 1px rgba(112, 46, 178, 0.6);
+transition: all 1s ;
+}
+.search-item > input:focus{
+border: solid 1.8px rgba(65, 3, 77, 0.6);
+transform: scaleX(1.1);
+}
+
+.search-item > input::placeholder{
+font-size: smaller;
+text-align: center;
+}
+.arrow > #angle-down{
+transition: all 1s;
+font-size: x-large;
+}
+
+.arrow > #angle-up{
+transition: all 1s;
+font-size: x-large;
+}
+
+
+
+.open-menu{
+   width: 260px;
+   height: 400px;
+   top: 90px;
+   right: 2px;
+   background: rgba(250, 250, 250, 1);
+  
+   border-radius:10px;
+   z-index: 100000;
+   position: fixed;
+   overflow: hidden;
+   overflow: scroll;
+ 
+}
+.open-menu::-webkit-scrollbar-track{
+ background-color:  rgba(250, 250, 250, 1);
+}
+.open-menu::-webkit-scrollbar-thumb{
+ background-color: rgb(0, 0, 0);
+
+}
+.open-menu::-webkit-scrollbar{
+   background-color: rgb(255, 255, 255);
+   width: 12px;
+   
+   
+ 
+}
+.main-menu{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 8px;
+}
+
+.first-list{
+   padding: 9px;
+}
+
+.first-list > .up-list{
+   display: flex;
+   color: black;
+  text-decoration: none;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: px;
+  padding-left: 6px;
+}
+
+.categories ul > li,a{
+   list-style-type: none;
+   text-decoration: none;
+   color: black;
+   font-size: 16px;
+  font-weight: 600;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+.discovery li{
+  list-style-type: none;
+
+}
+.discovery{
+   padding-top: 20px;
+
+}
+
+.open-menu{
+   display: none;
+}
+
+.flag select{
+    position: fixed;
+    top: 80px;
+    right: 5%;
+    z-index: 1000;
+   
+  
+    
+}
+
+
+
+
+
+.user-img img{
+    width: 60px;
+    border-radius: 50%;
+    border: solid 1px black;
+}
+.chart-chart{
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    top: 76px;
+    display: flex;
+    justify-content: left;
+    background-color: black;
+}
+.user-name{
+    font-size: small;
+    font-weight: 800;
+    color: white;
+}
+
+.user-message{
+    font-size: x-small;
+    color: red;
+   font-weight: 600;
+}
+
+#textarea{
+    width: 600px;
+}
+@media all and (max-width:750px) {
+
+    #textarea{
+    width: 400px;
+}
+
+}
+@media all and (max-width:500px) {
+
+    #textarea{
+    width: 300px;
+}
+
+}
+@media all and (max-width:400px) {
+
+    #textarea{
+    width: 200px;
+}
+
+}
+
+#chat-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#messages {
+    height: 250px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin: 5px 0;
+}
+
+.user1 {
+    color: blue;
+}
+
+.user2 {
+    color: green;
+}
+</style>
+
+</head>
+<body>
+
+
+    
+   <header>
+    <div class="logo"><div>
+        <img src="../img/ICON WHITE.png" class="logopic"></div> 
+        <div class="logoname">INFINITY MARKET PLACE</div>
+    </div>
+ 
+    <div class="left-header">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Discovery</a></li>
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Cart</a></li>
+            <li ><a href="#" class="reddd" >Log in/Sign up</a></li>
+            <li> <img class="picc" src="../img/6215524e7d3b34c0af4a4ce51e1fd997.jpg" alt=""> </li>
+          
+        </ul>
+    </div>
+</header>
+
+<div class="menu-and-flag">
+    <div>
+        
+<menu class="menuu">
+    <div class="right-menu" style="text-align: center;">menu</div>
+    <div class="arrow"><i class="fa fa-angle-down" aria-hidden="true" id="angle-down"></i></div>
+   </menu>
+    </div>
+
+    <div class="flag">
+    
+    </div>
+</div>
+
+
+<div class="open-menu">
+<div class="main-menu">
+    <div class="right-menu" style="text-align: center;">menu</div>
+    <div class="arrow"><i class="fa fa-angle-up" aria-hidden="true" id="angle-up"></i></div>
+    <div class="search-item"><input type="text" placeholder=" type to search"></div>
+
+</div>
+    
+<div class="open-menu-list">
+    <div class="first-list">
+           <a class="up-list" href="#">
+            <div class="list-icon">
+           
+<i class="fa fa-line-chart" aria-hidden="true"></i>
+            </div>
+           <div class="list-name">
+               Top rated
+            </div>
+           </a>
+           <a class="up-list" href="#" >
+            <div class="list-icon">
+           <img src="../img/check_ring_round_duotone_line.png" alt="">
+            </div>
+           <div class="list-name" >
+               People's choice
+            </div>
+           </a>
+           <a class="up-list" href="#">
+            <div class="list-icon">
+             <img src="../img/Star 1.png" alt="">
+            </div>
+           <div class="list-name">
+               Top brands
+            </div>
+           </a>
+
+        </div>
+
+        <div class="categories">
+            <ul>
+               <li><a href="#"><h4>CATEGORIES</h4></a></li>
+               <li><a href="#">Wears</a></li>
+               <li><a href="#">Electronics</a></li>
+               <li><a href="#">Gadgets</a></li>
+               <li><a href="#">home decor</a></li>
+               <li><a href="#">Cosmetics</a></li>
+               <li><a href="#">Beauty & wash</a></li>
+              
+            </ul>
+        </div>
+
+        <div class="discovery">
+            <li><a href="#" id="dis">#DISCOVERY CONTENTS</a></li>
+            <li><a href="#">#Wears #Electronics</a></li>
+        </div>
+               
+        <div class="first-list" style="margin-top: 25px;">
+      
+            <a class="up-list" href="#">
+             <div class="list-icon">
+             <img src="" alt="">##
+             </div>
+            <div class="list-name" >
+            Sell
+             </div>
+            </a>
+            <a class="up-list" href="#">
+             <div class="list-icon">
+             <img src="" alt="">##
+             </div>
+            <div class="list-name" >
+             Cart
+             </div>
+            </a>
+            <a class="up-list" href="#">
+             <div class="list-icon">
+             <img src="../img/home.png" alt="">
+             </div>
+            <div class="list-name" style="color: blueviolet;">
+             Profile
+             </div>
+            </a>
+            <a class="up-list" href="#">
+             <div class="list-icon">
+            <img src="../img/Paper_light.png" alt="">
+             </div>
+            <div class="list-name">
+                History
+             </div>
+            </a>
+ 
+         </div>
+        <div class="first-list" style="margin-top: 30px;">
+              <h6>INFO</h6>
+            <a class="up-list" href="#">
+             <div class="list-icon">
+             <img src="../img/Chat_alt_3.png" alt="">
+             </div>
+            <div class="list-name">
+            chat
+             </div>
+            </a>
+            <a class="up-list" href="#">
+             <div class="list-icon">
+             <img src="../img/Bell_pin.png" alt="">
+             </div>
+            <div class="list-name" >
+                Notification
+             </div>
+            </a>
+ 
+         </div>
+
+         <div class="first-list" style="margin-top: 30px;">
+         <h6>ACCOUNT</h6>
+            <a class="up-list" href="#">
+             <div class="list-icon">
+             <img src="../img/folder.png" alt="">
+             </div>
+            <div class="list-name">
+           Switch Account
+             </div>
+            </a>
+            <a class="up-list" href="#">
+             <div class="list-icon">
+             <img src="../img/folder.png" alt="">
+             </div>
+            <div class="list-name">
+               Help
+             </div>
+            </a>
+ 
+         </div>
+         <div class="first-list" style="margin-top: 60px;">
+        
+            <a class="up-list" href="#">
+             <div class="list-icon">
+           <img src="../img/cog.png" alt="">
+             </div>
+            <div class="list-name">
+         Setting
+             </div>
+            </a>
+            <a class="up-list" href="#">
+             <div class="list-icon">
+             <img src="../img/logout.png" alt="">
+             </div>
+            <div class="list-name">
+            Logout
+             </div>
+            </a>
+ 
+         </div>
+</div>
+
+                </div>
+    
+
+
+
+<div class="chart-chart">
+    <div class="main-cha">
+            
+        <div class="add-chart">
+            <div class="chart-info" style="display: flex ; justify-content: space-evenly; align-items: center; gap: 30px; width: auto;">
+                <div class="user-img"><img src="../img/8.png" alt=""></div>
+                <div class="chart-user-messs">
+                    <div class="user-name">Mkovur </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+</div>
+
+    
+
+<div class="display-chart" style="position: relative; top: 200px;">
+    <div class="user-messagee" style="text-align: right;"></div>
+    <div class="seller-message" style="text-align: left;"></div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+   
+
+    <div class="input-for-text" style="display: flex; border: solid black 2px;  position: fixed; align-items: center;  bottom: 0; left: 0; right: 0; background-color: black; width: 100%; justify-content: center;"  >
+        <div class="text"><textarea name="" id="textarea" style=" height: auto; border-radius: 4px; border: none; outline: none; "></textarea></div>
+        <div class="send-buttt" ><button class="send-message" style="padding: 8px; border-radius: 6px; background-color: blueviolet;  font-weight: 600;">send <i class="fa fa-send-o" style="font-size:24px"></i></button></div>
+    </div>
+
+
+
+
+
+
+
+    
+</body>
+</html>

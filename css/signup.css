@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+.signin-up-holdall {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.sign-up-form {
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    font-weight: 600;
+    background-color: rgb(242, 242, 242);
+    border-radius: 8px;
+}
+.signin-img {
+    width: 50%;
+    height: auto;
+}
+
+@media all and (max-width: 1100px) {
+    .sign-up-form {
+        width: 100%;
+    }
+    
+    .signin-img {
+        display: none;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .signin-img {
+        display: none;
+    }
+    .sign-up-form {
+        width: 100%;
+    }
+}
+
+input {
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.names {
+    display: flex;
+    /* justify-content: stretch; */
+    flex-direction: column;
+    gap: 10px;
+}
+
+.names input {
+    width: 100%;
+}
+
+.password-confirm {
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.emailll {
+    display: flex;
+}
+
+.secure-password {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sign-up-des .icn {
+    text-align: left;
+}
+
+.sign-up-form input {
+    border: solid rgb(180, 178, 178) 1.5px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 1s;
+    outline: none;
+}
+
+.sign-up-form input:focus {
+    transform: scale(1.03) translateY(-4px);
+}
+
+.form-body {
+    padding: 26px;
+}
+
+.sign-up-buttonn {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up-buttonn button {
+    padding: 12px;
+    border-radius: 13px;
+    border: none;
+    color: white;
+    transition: all 1s;
+    background-color: rgba(112, 46, 178, .98);
+}
+
+.sign-up-buttonn button:hover {
+    transform: scale(0.9);
+}
+
+.termsandcondition {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    font-weight: 500;
+    gap: 10px;
+}
+
+.orr1 {
+    border-bottom: solid 2px black;
+}
+
+.orrr,
+.sign-google,
+.sign-apple {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sign-google img,
+.sign-apple img {
+    padding-right: 10px;
+    height: 20px;
+}
+
+.sign-google button,
+.sign-apple button {
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 11px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    align-items: center;
+    transition: all 1s;
+}
+
+.sign-google button:hover,
+.sign-apple button:hover {
+    transform: scale(0.9);
+}
+
+.orrr {
+    gap: 8px;
+    align-items: center;
+}
+
+.orr1 {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.477);
+    width: 150px;
+}
+
+.emailll input {
+    width: 100%;
+}
+
+.secure-password input {
+    width: 100%;
+}
+
+/* Toast notification styles */
+.toast {
+    visibility: hidden;
+    max-width: 50%;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transform: translateX(-50%);
+}
+
+.toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+input {
+    height: 50px;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

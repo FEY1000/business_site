@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.picture {
+  width: 50%;
+  height: 100vh;
+}
+
+.picture img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.formmm{
+  width: 50%;
+  background-color: #f2f2f2;
+}
+.well{
+  font-size: 18px;
+}
+.container{
+  padding: 0 20px;
+}
+input{
+    width: 100%;
+    margin: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding: 4px;
+    outline: none;
+}
+
+.password {
+  width: 100%;
+}
+
+     .form-with-picture{
+        display: flex;
+     }
+
+
+.login-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+     
+.login-buttonn{
+  width: 100%;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+}
+
+.log-top{
+  margin-bottom: 20px;
+}
+
+.welcome-back {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.let-get {
+  font-size: 20px;
+}
+
+.pass {
+  margin-bottom: 20px;
+}
+
+.login-buttonn button{
+  width: 264px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 13px;
+  border: none;
+  color: white;
+  transition: all 1s;
+  background-color: rgba(112, 46, 178, 0.6);
+}
+
+.login-buttonn button:hover{
+  transform: scale(0.9);
+}
+.orr1{
+ border-bottom: solid 2px black;
+}
+
+.orrr, .sign-google, .sign-apple{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+} 
+
+
+.sign-google img, .sign-apple img{
+  padding-right: 10px;
+} 
+
+.sign-google  button, .sign-apple button{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 11px;
+    border: none;
+    font-weight: 600;
+    transition: all 1s;
+  font-size: 14px;
+    height: 40px;
+}
+.google-acc, .apple-acc {
+  width: 70%;
+}
+.sign-google  button:hover, .sign-apple button:hover{
+   transform: scale(0.9);
+}
+.orrr{
+    gap: 8px;
+    align-items: center;
+}
+.orr1{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.477);
+    width: 150px;
+}
+
+.about-the-market{
+    text-align: center;
+    background-color: rgb(159, 159, 159);
+    margin-top:75px ;
+}
+.about-the-market .para{
+    text-align: center;
+    font-size: 9px;
+    font-weight: bolder;
+}
+
+.about-the-market .parara{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+
+@media all  and (max-width: 930px) {
+    .picture{
+        display: none;
+
+    }
+    .formmm{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 800px) {
+  .picture {
+    display: none;
+  }
+  .formmm {
+    width: 100%;
+  }
+}

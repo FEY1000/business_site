@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat List</title>
+   
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-list-container">
+        <h2>Chats</h2>
+        <div class="chat-item" onclick="openChat('Friend 1', 'Hey! How are you?', '10:00 AM')">
+            <div class="avatar">F1</div>
+            <div class="chat-details">
+                <div class="chat-name">Friend 1</div>
+                <div class="chat-last-message"> </div>
+            </div>
+            <div class="chat-time"> </div>
+        </div>
+        <div class="chat-item" onclick="openChat('Friend 2', 'Let\'s meet tomorrow.', '09:30 AM')">
+            <div class="avatar">F2</div>
+            <div class="chat-details">
+                <div class="chat-name">Friend 2</div>
+                <div class="chat-last-message">Let’s meet tomorrow.</div>
+            </div>
+            <div class="chat-time">09:30 AM</div>
+        </div>
+        <div class="chat-item" onclick="openChat('Friend 3', 'Are you coming to the party?', '09:00 AM')">
+            <div class="avatar">F3</div>
+            <div class="chat-details">
+                <div class="chat-name">Friend 3</div>
+                <div class="chat-last-message">Are you coming to the party?</div>
+            </div>
+            <div class="chat-time">09:00 AM</div>
+        </div>
+        <div class="chat-item" onclick="openChat('Friend 4', 'See you later!', '08:45 AM')">
+            <div class="avatar">F4</div>
+            <div class="chat-details">
+                <div class="chat-name">Friend 4</div>
+                <div class="chat-last-message">See you later!</div>
+            </div>
+            <div class="chat-time">08:45 AM</div>
+        </div>
+    </div>
+
+    <script>
+        function openChat(friend, lastMessage, time) {
+            localStorage.setItem('currentChat', friend);
+            localStorage.setItem('lastMessage', lastMessage);
+            localStorage.setItem('time', time);
+            window.location.href = 'chat.html';
+        }
+    </script>
+</body>
+</html>

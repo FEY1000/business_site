@@ -1,0 +1,245 @@
+@import url(menu.css);
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.655);
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px;
+    z-index: 1000000;
+  
+}
+.logo{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.logopic{
+    height: 39.16px;
+    width: 41.26px;
+}
+.logoname{
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+@media all and (max-width:830px) {
+   
+   .logopic{
+       width: 22px;
+       aspect-ratio: 1;
+   }
+   .logoname{
+       font-weight: 400;
+       font-size: 16px;
+      
+   }
+
+
+   .left-header > ul > li:nth-child(1){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(2){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(3){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(4 ){
+     display: none;
+       
+       }
+  
+ /*  .left-header > ul > li:nth-child(7 ){
+     display: none;
+       
+       }*/
+  
+   .left-header > ul > li:nth-child(4 ){
+     display: none;
+       
+       }
+  
+ }
+
+ @media all and (max-width:500px) {
+
+  .reddd{
+   font-size: 8px;
+  }
+   .logoname{
+       font-weight: 400;
+       font-size: 6px;
+      
+   }
+   .left-header > ul > li:nth-child(5){
+      font-size: 8px;
+   
+   }
+   .left-header li .picc{
+     width: 20px;
+   }
+}
+
+ @media all and (max-width:300px) {
+  
+
+  .reddd{
+   font-size: 4px;
+   padding: 0;
+   margin: 0;
+  }
+   .logoname{
+       font-weight: 400;
+       font-size: 4px;
+   }
+}
+ 
+.left-header ul li > a{
+   color: white;
+}
+
+.left-header > ul {
+   display: flex;
+list-style-type:none;
+align-items: center;
+
+
+font-weight: 800 ;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li > .picc{
+width: 36px;
+aspect-ratio: 1;
+border-radius: 50%;
+border: solid white 1px;
+
+
+}
+
+.left-header > ul > li:nth-child(1){
+border-radius: 4px;
+background-color:  rgba(247, 130, 35, 1);
+
+}
+.left-header > ul > li:nth-child(1):hover{
+   color: rgb(255, 210, 168);
+   transform: scale(1);
+
+}
+
+
+
+.left-header > ul > li a{
+padding-right: 4px;
+padding: 6px;
+
+margin: 4px;
+transition: all .4s;
+
+} 
+
+.left-header > ul > li {
+
+padding: 4px;
+
+
+transition: all .4s;
+
+} 
+.left-header > ul > li:hover{
+   color: rgb(241, 125, 10);
+   transform: scale(1.1);  
+}
+.left-header > ul > li a:hover{
+   color: rgb(241, 125, 10);
+   transform: scale(1.1);  
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.flag{
+    position: fixed;
+    top: 80px;
+    right: 0;
+    z-index: 100000;
+  }
+
+.cust-namee{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+th{
+    padding: 6px;
+    color: blue;
+ 
+}
+.profile-img{
+    width: 60px;
+    aspect-ratio: 1;
+    border: solid 1px gray;
+    border-radius: 50%;
+}
+td{
+    padding: 4px;
+    font-size: x-small;
+    font-weight: 500;
+}
+
+
+ table{
+    width: 100%;
+    position: relative;
+    top: 170px;
+    padding: 20px;
+   
+ }
+
+ table, td, th{
+    text-align: center;
+    align-items: center;
+    border: 2px solid rgb(167, 167, 167);
+    border-collapse: collapse;
+    border-left: none;
+    border-right: none;
+ }
+
+ .complete{
+    width: 100px;
+    color: green;
+    border-radius: 6px;
+    background-color: rgba(0, 128, 0, 0.228);
+ }
+.pricee{
+    color: red;
+}
+.email-add{
+    color: brown;
+}
+.customersss{
+    position: relative;
+    top: 140px;
+}
+
+.transaction-table {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transform: translateY(-4px);
+}

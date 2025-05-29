@@ -1,0 +1,573 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+
+
+
+
+header{
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     color: white;
+     height: 68px;
+     background-color: rgba(112, 46, 178, 0.2);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     padding: 16px;
+     z-index: 1000000;
+ }
+ .logo{
+     display: flex;
+     gap: 20px;
+     align-items: center;
+ }
+ .logopic{
+     height: 39.16px;
+     width: 41.26px;
+ }
+ .logoname{
+     font-weight: 700;
+     font-family: sans-serif;
+ }
+ .hold-users-option{
+    background-color: rgba(255, 255, 255, 0.432);
+    color: rgb(0, 0, 0);
+    position: fixed;
+    z-index: 1000;
+    top: 60px;
+    font-size: small;
+    right: 4px;
+    display: none;
+   
+    
+ }
+ @media all and (max-width:830px) {
+    
+    .logopic{
+        width: 22px;
+        aspect-ratio: 1;
+    }
+    .logoname{
+        font-weight: 400;
+        font-size: 16px;
+       
+    }
+ 
+
+    .left-header > ul > li:nth-child(1){
+      display: none;
+        
+        }
+    .left-header > ul > li:nth-child(2){
+      display: none;
+        
+        }
+    .left-header > ul > li:nth-child(3){
+      display: none;
+        
+        }
+    .left-header > ul > li:nth-child(4 ){
+      display: none;
+        
+        }
+   
+  /*  .left-header > ul > li:nth-child(7 ){
+      display: none;
+        
+        }*/
+   
+    .left-header > ul > li:nth-child(4 ){
+      display: none;
+        
+        }
+   
+  }
+
+  @media all and (max-width:500px) {
+    .logoname{
+        font-weight: 400;
+        font-size: 10px;
+       
+    }
+    .left-header > ul > li:nth-child(5){
+       font-size: 15px;
+    
+    }
+}
+  
+.left-header ul li > a{
+    color: white;
+}
+
+ .left-header > ul {
+    display: flex;
+ list-style-type:none;
+ align-items: center;
+
+
+ font-weight: 800 ;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+li > .picc{
+ width: 36px;
+ aspect-ratio: 1;
+ border-radius: 50%;
+ border: solid white 1px;
+
+
+}
+
+.left-header > ul > li:nth-child(1){
+border-radius: 4px;
+background-color:  rgba(247, 130, 35, 1);
+
+}
+.left-header > ul > li:nth-child(1):hover{
+    color: rgb(255, 210, 168);
+    transform: scale(1);
+
+}
+
+
+
+.left-header > ul > li a{
+padding-right: 4px;
+padding: 6px;
+
+margin: 4px;
+transition: all .4s;
+
+} 
+
+.left-header > ul > li {
+
+padding: 4px;
+
+
+transition: all .4s;
+
+} 
+.left-header > ul > li:hover{
+    color: rgb(241, 125, 10);
+    transform: scale(1.1);  
+}
+.left-header > ul > li a:hover{
+    color: rgb(241, 125, 10);
+    transform: scale(1.1);  
+}
+
+menu{
+    display: flex;
+    background-color:rgba(250, 250, 250, 0.63) ;
+    border-radius: 10px;
+    width: 238px;
+    height: 54px;
+    top: 74px;
+    left: 71px;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000000;
+   
+
+
+}
+.right-menu{
+border: solid 1px  rgba(112, 46, 178, 0.6);
+border-radius: 8px ;
+background-color: rgba(255, 255, 255, 1);
+height: 23px;
+width: 50px;
+font-size: x-small;
+font-weight: 600;
+text-align: center;
+transition: all .9s;
+}
+.right-menu:hover{
+transform: scaleX(0.9);
+}
+.search-item > input{
+width: 128px;
+height: 24.27px;
+border-radius: 7px;
+font-size: smaller;
+padding: 4px;
+outline: none;
+border: solid 1px rgba(112, 46, 178, 0.6);
+transition: all 1s ;
+}
+.search-item > input:focus{
+border: solid 1.8px rgba(65, 3, 77, 0.6);
+transform: scaleX(1.1);
+}
+
+.search-item > input::placeholder{
+font-size: smaller;
+text-align: center;
+}
+.arrow > #angle-down{
+transition: all 1s;
+font-size: x-large;
+}
+.arrow > #angle-down:hover{
+transform: translateY(10px);
+}
+.arrow > #angle-up{
+transition: all 1s;
+font-size: x-large;
+}
+.arrow > #angle-up:hover{
+transform: translateY(-10px);
+}
+
+
+.open-menu{
+    width: 260px;
+    height: 400px;
+    top: 90px;
+    left: 0px;
+    background: rgba(250, 250, 250, 1);
+   
+    border-radius:10px;
+    z-index: 100000;
+    position: fixed;
+    overflow: hidden;
+    overflow: scroll;
+  
+}
+.open-menu::-webkit-scrollbar-track{
+  background-color:  rgba(250, 250, 250, 1);
+}
+.open-menu::-webkit-scrollbar-thumb{
+  background-color: rgb(0, 0, 0);
+ 
+}
+.open-menu::-webkit-scrollbar{
+    background-color: rgb(255, 255, 255);
+    width: 12px;
+    
+    
+  
+}
+.main-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+}
+
+.first-list{
+    padding: 9px;
+}
+
+.first-list > .up-list{
+    display: flex;
+    color: black;
+   text-decoration: none;
+   gap: 8px;
+   font-size: 16px;
+   font-weight: 600;
+   margin-bottom: px;
+   padding-left: 6px;
+}
+
+.categories ul > li,a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+   font-weight: 600;
+   padding-left: 5px;
+   margin-bottom: 3px;
+}
+.discovery li{
+   list-style-type: none;
+
+}
+.discovery{
+    padding-top: 20px;
+ 
+}
+
+.open-menu{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+.for-containers{
+    position: relative;
+    top: 100px;
+}
+.product-large-view{
+    width: 400px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    transition: all 1.5s;
+    
+}
+.product-large-view:hover{
+   transform: translateY(-5px) scale(1.2); 
+  
+}
+.pro-lar-vi-image{
+   
+    border: solid 1.5px rgb(167, 152, 252);
+   
+}
+.pro-lar-vi-image img{
+    width: 300px;
+    
+    object-fit: cover;
+}
+
+.confirm-product{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.product-detail{
+    width: 400px;
+    height: auto;
+}
+.add-to-cart button{
+ background-color: white;
+ border: 1.5px solid black;
+ width: 100%;
+ padding: 6px;
+ color: orangered;
+ margin-bottom: 12px;
+ transition: all 1s;
+
+}
+.add-to-cart button:hover{
+ transform: scale(0.96);
+}
+.buy-now button{
+    border:  solid 1.5px black;
+    width: 100%;
+    padding: 6px;
+    color: orangered;
+    background-color: rgb(202, 163, 202);
+    transition: all 1s;
+
+}
+.buy-now button:hover{
+   transform: scale(0.96);
+}
+
+.new-items{
+    background-color: white;
+    width: 240px;
+    height: 380px;
+    padding-bottom: 8px;
+    transition: all 1s;
+    border-radius: 4px;
+    padding: 10px;
+     
+}
+.new-items:hover{
+    transform: translateY(-10px) scale(1.05);
+   
+}
+.new-items img{
+    width:100%;
+    transition: all 1s;
+    height: 160px;
+    border-radius: 4px;
+}
+.new-items img:hover{
+    transform: scale(1.01) rotateY(10deg);
+}
+.buyy{
+    transition: all 1s;
+    border-radius: 3px;
+}
+.buyy:hover{
+    transform: scale(0.9);
+    border-radius: 5px;
+}
+
+.fourth{
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    gap: 30px;
+}
+.recent-view-product{
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap ;
+   justify-content: center;
+}
+
+
+
+footer{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+     top: 200px;
+    position: relative;
+    box-shadow: 0px 0px 15px black;
+    padding-top: 10px;
+}
+
+
+@media all and (max-width:800px) {
+ 
+  }
+.ava-for-u{
+    font-size: smaller;
+    font-weight: 400;
+
+}
+.sub-to-news button{
+    font-size: smaller;
+    border: none;
+    padding: 8px;
+    background-color: rgb(173, 173, 173);
+    transition: all 1s;
+}
+
+.sub-to-news button:hover{
+    transform: scale(0.9);
+}
+.bas{
+    font-size: smaller;
+}
+
+.nott button{
+    color: white;
+    padding: 6px;
+    border: none;
+    font-size: smaller;
+    outline: none;
+    background: rgb(116, 52, 116);
+    transition: all 1s;
+
+}
+.nott button:hover{
+    transform: scale(0.9);
+}
+.footer-up-33 .foot33{
+font-size: smaller;
+}
+.footer-up-44 .termm{
+    font-size: smaller;
+}
+.footer-up{
+    margin-top: 20px;
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.footer-up h4{
+   margin-bottom: 10px;
+}
+.iconn{
+    margin-bottom: 25px;
+}
+.iconss img{
+   transition: all 1s; 
+}
+.iconss img:hover{
+ transform: scale(1.5);
+}
+.bas div{
+    margin-bottom: 8px;
+}
+
+.foot33{
+    padding-bottom: 
+        8px
+    ;
+}
+
+.invisible{
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    aspect-ratio: 1;
+}
+.footer-down{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 16px;  
+}
+
+.iconss img{
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+@media all and (max-width:800px) {
+  .footer-down{
+  gap: 30px;
+  }
+    
+     }
+
+     .base1{
+        display: flex;
+        align-items: center;
+     }
+     .base1 img{
+        width: 110px;
+     }
+     .base2 img{
+        width: 300px;
+     }
+
+     .footer-baseline{
+        display: flex;
+        align-items: center;
+        padding: 50px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+     }
+
+
+     
+.flag{
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  z-index: 100000;
+}
+
+
+.return-home{
+    position: fixed;
+    right: 10px;
+    z-index: 1000000;
+}

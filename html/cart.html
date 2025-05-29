@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Cart</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    
+    <script src="../js/jquery.js"></script>
+    <script src="../js/imp.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+
+
+
+    <style>
+ 
+ header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    height: auto;
+    background-color: rgb(117, 23, 211);
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px;
+    z-index: 1000000;
+}
+.logo{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.logopic{
+    height: 39.16px;
+    width: 41.26px;
+}
+.logoname{
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+@media all and (max-width:830px) {
+   
+   .logopic{
+       width: 22px;
+       aspect-ratio: 1;
+   }
+   .logoname{
+       font-weight: 400;
+       font-size: 16px;
+      
+   }
+
+
+   .left-header > ul > li:nth-child(1){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(2){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(3){
+     display: none;
+       
+       }
+   .left-header > ul > li:nth-child(4 ){
+     display: none;
+       
+       }
+  
+ /*  .left-header > ul > li:nth-child(7 ){
+     display: none;
+       
+       }*/
+  
+   .left-header > ul > li:nth-child(4 ){
+     display: none;
+       
+       }
+  
+ }
+
+ @media all and (max-width:500px) {
+
+  .reddd{
+   font-size: 8px;
+  }
+   .logoname{
+       font-weight: 400;
+       font-size: 6px;
+      
+   }
+   .left-header > ul > li:nth-child(5){
+      font-size: 8px;
+   
+   }
+   .left-header li .picc{
+     width: 20px;
+   }
+}
+
+ @media all and (max-width:300px) {
+  
+
+  .reddd{
+   font-size: 4px;
+   padding: 0;
+   margin: 0;
+  }
+   .logoname{
+       font-weight: 400;
+       font-size: 4px;
+   }
+}
+ 
+.left-header ul li > a{
+   color: white;
+}
+
+.left-header > ul {
+   display: flex;
+list-style-type:none;
+align-items: center;
+
+
+font-weight: 800 ;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li > .picc{
+width: 36px;
+aspect-ratio: 1;
+border-radius: 50%;
+border: solid white 1px;
+
+
+}
+
+.left-header > ul > li:nth-child(1){
+border-radius: 4px;
+background-color:  rgba(247, 130, 35, 1);
+
+}
+.left-header > ul > li:nth-child(1):hover{
+   color: rgb(255, 210, 168);
+   transform: scale(1);
+
+}
+
+
+
+.left-header > ul > li a{
+padding-right: 4px;
+padding: 6px;
+
+margin: 4px;
+transition: all .4s;
+
+} 
+
+.left-header > ul > li {
+
+padding: 4px;
+
+
+transition: all .4s;
+
+} 
+.left-header > ul > li:hover{
+   color: rgb(241, 125, 10);
+   transform: scale(1.1);  
+}
+.left-header > ul > li a:hover{
+   color: rgb(241, 125, 10);
+   transform: scale(1.1);  
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.flag{
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    z-index: 100000;
+  }
+
+
+menu{
+   display: flex;
+   background-color:rgba(250, 250, 250, 0.63) ;
+   border-radius: 10px;
+   width: 238px;
+   height: 54px;
+   top: 80px;
+   left: 0;
+   position: fixed;
+   justify-content: space-around;
+   align-items: center;
+   z-index: 1000000;
+  
+
+
+}
+.right-menu{
+border: solid 1px  rgba(112, 46, 178, 0.6);
+border-radius: 8px ;
+background-color: rgba(255, 255, 255, 1);
+height: 23px;
+width: 50px;
+font-size: x-small;
+font-weight: 600;
+text-align: center;
+transition: all .9s;
+}
+.right-menu:hover{
+transform: scaleX(0.9);
+}
+.search-item > input{
+width: 128px;
+height: 24.27px;
+border-radius: 7px;
+font-size: smaller;
+padding: 4px;
+outline: none;
+border: solid 1px rgba(112, 46, 178, 0.6);
+transition: all 1s ;
+}
+.search-item > input:focus{
+border: solid 1.8px rgba(65, 3, 77, 0.6);
+transform: scaleX(1.1);
+}
+
+.search-item > input::placeholder{
+font-size: smaller;
+text-align: center;
+}
+.arrow > #angle-down{
+transition: all 1s;
+font-size: x-large;
+}
+.arrow > #angle-down:hover{
+transform: translateY(10px);
+}
+.arrow > #angle-up{
+transition: all 1s;
+font-size: x-large;
+}
+.arrow > #angle-up:hover{
+transform: translateY(-10px);
+}
+
+
+.open-menu{
+   width: 260px;
+   height: 400px;
+   top: 90px;
+   left: 0px;
+   background: rgba(250, 250, 250, 1);
+  
+   border-radius:10px;
+   z-index: 100000;
+   position: fixed;
+   overflow: hidden;
+   overflow: scroll;
+ 
+}
+.open-menu::-webkit-scrollbar-track{
+ background-color:  rgba(250, 250, 250, 1);
+}
+.open-menu::-webkit-scrollbar-thumb{
+ background-color: rgb(0, 0, 0);
+
+}
+.open-menu::-webkit-scrollbar{
+   background-color: rgb(255, 255, 255);
+   width: 12px;
+   
+   
+ 
+}
+.main-menu{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 8px;
+}
+
+.first-list{
+   padding: 9px;
+}
+
+.first-list > .up-list{
+   display: flex;
+   color: black;
+  text-decoration: none;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: px;
+  padding-left: 6px;
+}
+
+.categories ul > li,a{
+   list-style-type: none;
+   text-decoration: none;
+   color: black;
+   font-size: 16px;
+  font-weight: 600;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+.discovery li{
+  list-style-type: none;
+
+}
+.discovery{
+   padding-top: 20px;
+
+}
+
+.open-menu{
+   display: none;
+}
+
+.name{
+    color: rgb(0, 0, 69);
+    font-weight: 600;
+}
+.product, .description, .price, .delivery-fees, #showw p {
+    font-size: small;
+    font-weight: 500;
+    color: rgb(113, 0, 0);
+} .product-view img{
+   width: 260px;
+   border: solid 2px black ;
+   border-radius: 4px;
+}
+.product-detail{
+    background-color: rgba(0, 0, 0, 0.507);
+    border: solid rgba(0, 0, 0, 0.324) 2px;
+     display: flex; 
+     justify-content: space-between;
+     align-items: center;  
+     gap: 50px;
+     width: 500px;
+     flex-direction: column;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 2px 4px 8px black;
+
+}
+
+
+@media all and (max-width:550px) {
+  
+    .product-detail{
+   width: 98%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+ 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  height: auto;
+  gap: 20px;
+}
+
+.page-box {
+  width: 170px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 600;
+  flex-wrap: wrap;
+  background-color: rgba(128, 128, 128, 0.432);
+}
+
+.page-box.active {
+  background-color: #002774;
+  color: #fff;
+  width: 170px;
+  border-radius: 6px;
+  height: auto;
+  color: white;
+ 
+}
+
+.content {
+  padding: 20px;
+}
+
+.page-content {
+  display: none;
+  padding: 30px;
+}
+
+.page-content.active {
+  display: block;
+}
+
+
+
+
+.pagination{
+    position: relative;
+     top:  200px ;
+}
+    </style>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+
+    <header>
+        <div class="logo"><div>
+            <img src="../img/ICON WHITE.png" class="logopic"></div> 
+            <div class="logoname">INFINITY MARKET PLACE</div>
+        </div>
+     
+        <div class="left-header">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discovery</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Cart</a></li>
+                <li ><a href="#" class="reddd" >Log in/Sign up</a></li>
+                <li> <img class="picc" src="../img/6215524e7d3b34c0af4a4ce51e1fd997.jpg" alt=""> </li>
+              
+            </ul>
+        </div>
+    </header>
+    
+    <div class="menu-and-flag">
+        <div>
+            
+    <menu class="menuu">
+        <div class="right-menu" style="text-align: center;">menu</div>
+        <div class="arrow"><i class="fa fa-angle-down" aria-hidden="true" id="angle-down"></i></div>
+        <div class="search-item"><input type="text" placeholder=" type to search"></div>
+    </menu>
+        </div>
+    
+        <div class="flag">
+       <img src="../img/flag-for-flag-nigeria.svg" alt="" style="width: 80px; aspect-ratio: 4/2;" >
+          
+        </div>
+    </div>
+    
+    
+    <div class="open-menu">
+    <div class="main-menu">
+        <div class="right-menu" style="text-align: center;">menu</div>
+        <div class="arrow"><i class="fa fa-angle-up" aria-hidden="true" id="angle-up"></i></div>
+        <div class="search-item"><input type="text" placeholder=" type to search"></div>
+    
+    </div>
+        
+    <div class="open-menu-list">
+        <div class="first-list">
+               <a class="up-list" href="#">
+                <div class="list-icon">
+               
+    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                </div>
+               <div class="list-name">
+                   Top rated
+                </div>
+               </a>
+               <a class="up-list" href="#" >
+                <div class="list-icon">
+               <img src="../img/check_ring_round_duotone_line.png" alt="">
+                </div>
+               <div class="list-name" >
+                   People's choice
+                </div>
+               </a>
+               <a class="up-list" href="#">
+                <div class="list-icon">
+                 <img src="../img/Star 1.png" alt="">
+                </div>
+               <div class="list-name">
+                   Top brands
+                </div>
+               </a>
+    
+            </div>
+    
+            <div class="categories">
+                <ul>
+                   <li><a href="#"><h4>CATEGORIES</h4></a></li>
+                   <li><a href="#">Wears</a></li>
+                   <li><a href="#">Electronics</a></li>
+                   <li><a href="#">Gadgets</a></li>
+                   <li><a href="#">home decor</a></li>
+                   <li><a href="#">Cosmetics</a></li>
+                   <li><a href="#">Beauty & wash</a></li>
+                  
+                </ul>
+            </div>
+    
+            <div class="discovery">
+                <li><a href="#" id="dis">#DISCOVERY CONTENTS</a></li>
+                <li><a href="#">#Wears #Electronics</a></li>
+            </div>
+                   
+            <div class="first-list" style="margin-top: 25px;">
+          
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="" alt="">##
+                 </div>
+                <div class="list-name" >
+                Sell
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="" alt="">##
+                 </div>
+                <div class="list-name" >
+                 Cart
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="../img/home.png" alt="">
+                 </div>
+                <div class="list-name" style="color: blueviolet;">
+                 Profile
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                <img src="../img/Paper_light.png" alt="">
+                 </div>
+                <div class="list-name">
+                    History
+                 </div>
+                </a>
+     
+             </div>
+            <div class="first-list" style="margin-top: 30px;">
+                  <h6>INFO</h6>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="../img/Chat_alt_3.png" alt="">
+                 </div>
+                <div class="list-name">
+                chat
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="../img/Bell_pin.png" alt="">
+                 </div>
+                <div class="list-name" >
+                    Notification
+                 </div>
+                </a>
+     
+             </div>
+    
+             <div class="first-list" style="margin-top: 30px;">
+             <h6>ACCOUNT</h6>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="../img/folder.png" alt="">
+                 </div>
+                <div class="list-name">
+               Switch Account
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="../img/folder.png" alt="">
+                 </div>
+                <div class="list-name">
+                   Help
+                 </div>
+                </a>
+     
+             </div>
+             <div class="first-list" style="margin-top: 60px;">
+            
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+               <img src="../img/cog.png" alt="">
+                 </div>
+                <div class="list-name">
+             Setting
+                 </div>
+                </a>
+                <a class="up-list" href="#">
+                 <div class="list-icon">
+                 <img src="../img/logout.png" alt="">
+                 </div>
+                <div class="list-name">
+                Logout
+                 </div>
+                </a>
+     
+             </div>
+    </div>
+    
+                    </div>
+
+                          <!-- Pagination container -->
+<div class="pagination">
+    <!-- Page boxes -->
+    <div class="page-box active" data-page="1">
+      Buy
+         
+    </div>
+  
+    <div class="page-box" data-page="2">
+    Cart
+    </div>
+  
+  
+    <!-- Add more page boxes as needed -->
+  </div>
+  
+  <!-- Content container -->
+  <div class="content" style="position: relative; top: 160px;">
+    <!-- Page content will be displayed here -->
+    <div class="page-content active" data-page="1">
+       
+    
+   <div class="cart-box"  style="display: flex; justify-content: center; position: relative; top: 200px; ">
+    <div class="cart-contain" >
+        <div class="product-detail"   >
+         <div class="product-view"><img src="../img/brown-retro-electronic-blender-device.jpg" alt="">
+             
+         </div>
+         <div class="all-details">
+             <div class="product-name"><div class="name">Product:</div> <div class="product">children</div></div>
+ 
+             <div class="product-desc"><div class="name">Product-description:</div> <div class="description"> akasam</div></div>
+ 
+             <div class="product-price"><div class="name">Price:</div><div class="price">£ <span>1</span></div></div>
+ 
+             <div class="delivery-fee"><div class="name">delivery-fee:</div> <div class="delivery-fees">$0.11/£0.02</div></div>
+ 
+             <div class="quantity-amt" style="display: flex; ; gap: 8px;">
+                 <div class="name">Quantity:</div>
+                 <div id="inp"><input type="number" value="1" max="10" min="1" style="width: 50px; text-align: center;" id="quantity"></div>
+                     <div><button id="acc">ok</button></div>
+                <div id="showw"></div>
+                 </div>
+ 
+                 <label for="state" class="name">Choose a state:</label>
+                 <select id="state" onchange="updateLGAs()">
+                     <option value="">--Select a State--</option>
+                     <option value="Abia">Abia</option>
+                     <option value="Adamawa">Adamawa</option>
+                     <option value="AkwaIbom">Akwa Ibom</option>
+                     <option value="Anambra">Anambra</option>
+                     <option value="Bauchi">Bauchi</option>
+                     <option value="Bayelsa">Bayelsa</option>
+                     <option value="Benue">Benue</option>
+                     <option value="Borno">Borno</option>
+                     <option value="CrossRiver">Cross River</option>
+                     <option value="Delta">Delta</option>
+                     <option value="Ebonyi">Ebonyi</option>
+                     <option value="Edo">Edo</option>
+                     <option value="Ekiti">Ekiti</option>
+                     <option value="Enugu">Enugu</option>
+                     <option value="Gombe">Gombe</option>
+                     <option value="Imo">Imo</option>
+                     <option value="Jigawa">Jigawa</option>
+                     <option value="Kaduna">Kaduna</option>
+                     <option value="Kano">Kano</option>
+                     <option value="Kogi">Kogi</option>
+                     <option value="Kwara">Kwara</option>
+                     <option value="Lagos">Lagos</option>
+                     <option value="Nasarawa">Nasarawa</option>
+                     <option value="Niger">Niger</option>
+                     <option value="Ogun">Ogun</option>
+                     <option value="Ondo">Ondo</option>
+                     <option value="Osun">Osun</option>
+                     <option value="Oyo">Oyo</option>
+                     <option value="Plateau">Plateau</option>
+                     <option value="Rivers">Rivers</option>
+                     <option value="Sokoto">Sokoto</option>
+                     <option value="Taraba">Taraba</option>
+                     <option value="Yobe">Yobe</option>
+                     <option value="Zamfara">Zamfara</option>
+                 </select>
+         
+                 <div>
+                     <label for="lga" class="name">Choose a Local Government Area:</label>
+                        
+ 
+                     <select id="lga">
+                         <option value="">--Select LGA--</option>
+                     </select>
+                 
+                 </div>
+ 
+                 <div>
+                     <label for="address" class="name">Address</label>
+                     <input type="text" placeholder="address" > 
+                 </div>
+              
+             </div>
+         
+             <script>
+                 function updateLGAs() {
+                     const stateSelect = document.getElementById('state');
+                     const lgaSelect = document.getElementById('lga');
+                     const selectedState = stateSelect.value;
+         
+                     // Clear previous options
+                     lgaSelect.innerHTML = '<option value="">--Select LGA--</option>';
+         
+                     // Define LGAs based on selected state
+                     const lgas = {
+                         Abia: ['Aba North', 'Aba South', 'Ikwuano', 'Obingwa', 'Osisioma', 'Ugwunagbo', 'Ukwa East', 'Ukwa West', 'Isiala Ngwa North', 'Isiala Ngwa South'],
+                         Adamawa: ['Demsa', 'Fufore', 'Ganye', ' Girei', 'Gombi', 'Hong', 'Jada', 'Lamurde', 'Madagali', 'Maiha', 'Mayo-Belwa', 'Michika', 'Mubi North', 'Mubi South', 'Numan', 'Shelleng', 'Song', 'Toungo', 'Yola North', 'Yola South'],
+                         AkwaIbom: ['Abak', 'Eastern Obolo', 'Eket', 'Esit Eket', 'Essien Udim', 'Etim Ekpo', 'Etinan', 'Ibeno', 'Ibesikpo Asutan', 'Ibiono Ibom', 'Ika', 'Ikono', 'Ikot Abasi', 'Ikot Ekpene', 'Ini', 'Itu', 'Mbo', 'Mkpat Enin', 'Nsit Atai', 'Nsit Ibom', 'Nsit Ubium', 'Obot Akara', 'Okobo', 'Onna', 'Oron', 'Oro', 'Udung Uko', 'Ukanafun', 'Uruan', 'Urue-Offong/Oruko', 'Uyo'],
+                         Anambra: ['Aguata', 'Anambra East', 'Anambra West', 'Anaocha', 'Awka North', 'Awka South', 'Ayamelum', 'Dunukofia', 'Ekwusigo', 'Idemili North', 'Idemili South', 'Ihiala', 'Njikoka', 'Nnewi North', 'Nnewi South', 'Ogbaru', 'Onitsha North', 'Onitsha South', 'Orumba North', 'Orumba South', 'Oyi'],
+                         Bauchi: ['Alkaleri', 'Bauchi', 'Bogoro', 'Damban', 'Darazo', 'Dass', 'Gamawa', 'Giade', 'Itas/Gadau', 'Jama\'are', 'Katagum', 'Kirfi', 'Misau', 'Ningi', 'Shira', 'Tafawa Balewa', ' Toro', 'Warji', 'Zaki'],
+                         Bayelsa: ['Brass', 'Ekeremor', 'Kolokuma/Opokuma', 'Nembe', 'Ogbia', 'Sagbama', 'Southern Ijaw', 'Yenagoa'],
+                         Benue: ['Ado', 'Agatu', 'Apa', 'Buruku', 'Gboko', 'Guma', 'Gwer East', 'Gwer West', 'Katsina-Ala', 'Konshisha', 'Kwande', 'Logo', 'Markurdi', 'Obi', 'Ogbadibo', 'Ohimini', 'Oju', 'Okpokwu', 'Otukpo', 'Tarka', 'Ukum', 'Ushongo', 'Vandeikya'],
+                         Borno: ['Abadam', 'Askira/Uba', 'Bama', 'Bayo', 'Biu', 'Chibok', 'Damboa', 'Dikwa', 'Gubio', 'Guzamala', 'Gwoza', 'Hawul', 'Jere', 'Kaga', 'Kala/Balge', 'Konduga', 'Kukawa', 'Kwaya Kusar', 'Mafa', 'Magumeri', 'Maiduguri', 'Marte', 'Mobbar', 'Monguno', 'Ngala', 'Nganzai', 'Shani'],
+                         CrossRiver: ['Abi', 'Akamkpa', 'Akpabuyo', 'Bakassi', 'Bekwarra', 'Biase', 'Boki', 'Calabar Municipal', 'Calabar South', 'Etung', 'Ikom', 'Obanliku', 'Obubra', 'Obudu', 'Odukpani', 'Ogoja', 'Yakuur', 'Yala'],
+                         Delta: ['Aniocha North', 'Aniocha South', 'Bomadi', 'Burutu', 'Ethiope East', 'Ethiope West', 'Ika North East', 'Ika South', 'Isoko North', 'Isoko South', 'Ndokwa East', 'Ndokwa West', 'Okpe', 'Oshimili North', 'Oshimili South', 'Patani', 'Sapele', 'Udu', 'Ughelli North', 'Ughelli South', 'Uvwie', 'Warri North', 'Warri South', 'Warri South West'],
+                         Ebonyi: ['Abakaliki', 'Afikpo North', 'Afikpo South', 'Ebonyi', 'Ezza North ', 'Ezza South', 'Ikwo', 'Ishielu', 'Ivo', 'Izzi', 'Ohaozara', 'Ohaukwu', 'Onicha'],
+                         Edo: ['Akoko Edo', 'Egor', 'Esan Central', 'Esan North East', 'Esan South East', 'Esan West', 'Etsako Central', 'Etsako East', 'Etsako West', 'Igueben', 'Ikpoba Okha', 'Oredo', 'Orhionmwon', 'Ovia North East', 'Ovia South West', 'Owan East', 'Owan West', 'Uhunmwonde'],
+                         Ekiti: ['Ado Ekiti', 'Afuji/Ido Osi', 'Efon', 'Ekiti East', 'Ekiti South West', 'Ekiti West', 'Emure', 'Gbonyin', 'Ido/Osi', 'Ijero', 'Ikere', 'Ikole', 'Ilejemeje', 'Irepodun/Ifelodun', 'Ise/Orun', 'Moba', 'Oye'],
+                         Enugu: ['Aninri', 'Awgu', 'Enugu East', 'Enugu North', 'Enugu South', 'Ezeagu', 'Igbo Etiti', 'Igbo Eze North', 'Igbo Eze South', 'Isi Uzo', 'Nkanu East', 'Nkanu West', 'Nsukka', 'Oji River', 'Udenu', 'Udi', 'Uzo Uwani'],
+                         Gombe: ['Akko', 'Balanga', 'Billiri', 'Dukku', 'Funakaye', 'Gombe', 'Kaltungo', 'Kwami', 'Nafada/Bajoga', 'Shongom', 'Yamaltu/Deba'],
+                         Imo: ['Aboh Mbaise', 'Ahiazu Mbaise', 'Ehime Mbano', 'Ezinihitte Mbaise', 'Ideato North', 'Ideato South', 'Ihitte/Uboma', 'Ikeduru', 'Isiala Mbano', 'Isu', 'Mbaitoli', 'Ngor Okpala', 'Njaba', 'Nkwerre', 'Nwangele', 'Obowo', 'Oguta', 'Ohaji/Egbema', 'Okigwe', 'Orlu', 'Orsu', 'Oru East', 'Oru West', 'Owerri Municipal', 'Owerri North', 'Owerri West', 'Ozubulu'],
+                         Jigawa: ['Auyo', 'Babura', 'Birnin Kudu', 'Birniwa', 'Buji', 'Dutse', 'Gagarawa', 'Garki', 'Gumel', 'Guri', 'Gwaram', 'Gwiwa', 'Hadejia', 'Jahun', 'Kafin Hausa', 'Kaugama', 'Kazaure', 'Kiri Kasama', 'Kiyawa', 'Maigatari', 'Malam Madori', 'Miga', 'Ringim', 'Roni', 'Sule Tankarkar', 'Taura', 'Yankwashi'],
+                         Kaduna: ['Birnin Gwari', 'Chikun', 'Giwa', 'Igabi', 'Ikara', 'Jaba', 'Jema\'a', 'Kachia', 'Kaduna North', 'Kaduna South', 'Kagarko', 'Kajuru', 'Kaura', 'Kauru', 'Kubau', 'Kudan', 'Lere', 'Makarfi', 'Sabon Gari', 'Sanga', 'Soba', 'Zangon Kataf', 'Zaria'],
+                         Kano: ['Ajingi', 'Albasu', 'Bagwai', 'Bebeji', 'Bichi', 'Bunkure', 'Dala', 'Dambatta', 'Dawakin Kudu', 'Dawakin Tofa', 'Fagge', 'Gabasawa', 'Garko', 'Garun Mallam', 'Gaya', 'Gezawa', 'Gwale', 'Gwarzo', 'Kano Municipal', 'Karaye', 'Kibiya', 'Kiru', 'Kumbotso', 'Kunchi', 'Kura', 'Madobi', 'Makoda', 'Minjibir', 'Nasarawa', 'Rano', 'Rimin Gado', 'Rogo', 'Shanono', 'Sumaila', 'Takai', 'Tarauni', 'Tof a', 'Tsanyawa', 'Tudun Wada', 'Ungogo', 'Warawa', 'Wudil'],
+                         Kogi: ['Adavi', 'Ajaokuta', 'Ankpa', 'Bassa', 'Dekina', 'Ibaji', 'Idah', 'Igalamela Odolu', 'Ijumu', 'Kabba/Bunu', 'Kogi', 'Lokoja', 'Mopa Muro', 'Ofu', 'Ogori/Magongo', 'Okehi', 'Okene', 'Olamaboro', 'Omala', 'Yagba East', 'Yagba West'],
+                         Kwara: ['Asa', 'Baruten', 'Edu', 'Ekiti', 'Ifelodun', 'Ilorin East', 'Ilorin South', 'Ilorin West', 'Irepodun', 'Isin', 'Kaiama', 'Moro', 'Offa', 'Oke Ero', 'Oyun', 'Pategi'],
+                         Lagos: ['Agege', 'Ajeromi-Ifelodun', 'Alimosho', 'Amuwo-Odofin', 'Apapa', 'Badagry', 'Epe', 'Eti Osa', 'Ibeju-Lekki', 'Ifako-Ijaiye', 'Ikeja', 'Ikorodu', 'Ikorodu North', 'Ikorodu West', 'Kosofe', 'Lagos Island', 'Lagos Mainland', 'Mushin', 'Ojo', 'Oshodi-Isolo', 'Shomolu', 'Surulere'],
+                         Nasarawa: ['Akwanga', 'Doma', 'Eggon', 'Karu', 'Keana', 'Keffi', 'Lafia', 'Nasarawa', 'Nasarawa Egon', 'Obi', 'Toto', 'Wamba'],
+                         Niger: ['Agaie', 'Agwara', 'Bida', 'Borgu', 'Bosso', 'Chanchaga', 'Edati', 'Gbako', 'Gurara', 'Katcha', 'Kontagora', 'Lapai', 'Lavun', 'Magama', 'Mariga', 'Mashegu', 'Mokwa', 'Munya', 'Paikoro', 'Rafi', 'Shiroro', 'Suleja', 'Tafa', 'Wushishi'],
+                         Ogun: ['Abeokuta North', 'Abeokuta South', 'Ado-Odo/Ota', 'Egbado North', 'Egbado South', 'Ewekoro', 'Ifo', 'Ijebu East', 'Ijebu North', 'Ijebu North East', 'Ijebu Ode', 'Ikenne', 'Imeko Afon', 'Ipokia', 'Obafemi Owode', 'Odeda', 'Odogbolu', 'Ogun Waterside', 'Remo North', 'Shagamu'],
+                         Ondo: ['Akoko North East', 'Akoko North West', 'Akoko South East', 'Akoko South West', 'Akure North', 'Akure South', 'Ese Odo', 'Idanre', 'Ifedore', 'Ilaje', 'Ile Oluji/Okeigbo', 'Irele', 'Odigbo', 'Okitipupa', 'Ondo East', 'Ondo West', 'Ose', 'Owo'],
+                         Osun: ['Aiyedade', 'Aiyedire', 'Atakunmosa East', 'Atakunmosa West', 'Boluwaduro', 'Boripe', 'Ede North', 'Ede South', 'Egbedore', 'Ejigbo', 'Ifedayo', 'Ifelodun', 'Ife North', 'Ife South', 'Ila', 'Ilesa East', 'Ilesa West', 'Irepodun', 'Irewole', 'Isokan', 'Iwo', 'Obokun', 'Odo Otin', 'Ola Oluwa', 'Olorunda', 'Oriade', 'Orolu', 'Osogbo'],
+                         Oyo: ['Afijio', 'Akinyele', 'Atiba', 'Atisbo', 'Egbeda', 'Ibadan Central', 'Ibadan North', 'Ibadan North West', 'Ibadan South East', 'Ibadan South West', 'Ibarapa Central', 'Ibarapa East', 'Ibarapa North', 'Ido', 'Ifedapo', 'Ifeloju', 'Irepo', 'Iseyin', 'Itesiwaju', 'Iwajowa', 'Kajola', 'Lagelu', 'Ogbomosho North', 'Ogbomosho South', 'Ogo Oluwa', 'Olorunsogo', 'Oluyole', 'Ona Ara', 'Oorelope', 'Ori Ire', 'Oyo East', 'Oyo West', 'Saki East', 'Saki West', 'Surulere'],
+                         Plateau: ['Barkin Ladi', 'Bassa', 'Bokkos', 'Jos East', 'Jos North', 'Jos South', 'Kanam', 'Kanke', 'Langtang North', 'Langtang South', 'Mangu', 'Mikang', 'Pankshin', 'Qua\'an Pan', 'Riyom', 'Shendam', 'Wase'],
+                         Rivers: ['Abua/Odual', 'Ahoada East', 'Ahoada West', 'Akuku-Toru', 'Andoni', 'Asari-Toru', 'Bonny', 'Degema', 'Eleme', 'Emuoha', 'Etche', 'Gokana', 'Ikwerre', 'Khana', 'Obio/Akpor', 'Ogba/Egbema/Ndoni', 'Ogu/Bolo', 'Okrika', 'Omuma', 'Opobo/Nkoro', 'Oyigbo', 'Port Harcourt', 'Tai'],
+                         Sokoto: ['Binji', 'Bodinga', 'Dange Shuni', 'Gada', 'Goronyo', 'Gudu', 'Gwadabawa', 'Illela', 'Isa', 'Kebbe', 'Kware', 'Rabah', 'Sabon Birni', 'Shagari', 'Silame', 'Sokoto North', 'Sokoto South', 'Tambuwal', 'Tangaza', 'Tureta', 'Wamako', 'Wurno', 'Yabo'],
+                         Taraba: ['Ardo Kola', 'Bali', 'Donga', 'Gashaka', 'Gassol', 'Ibi', 'Jalingo', 'Karim Lamido', 'Kurmi', 'Lau', 'Sardauna', 'Takum', 'Ussa', 'Wukari', 'Yorro', 'Zing'],
+                         Yobe: ['Bade', 'Bursari', 'Damaturu', 'Fika', 'Fune', 'Geidam', 'Gujba', 'Gulani', 'Jakusko', 'Karasuwa', 'Machina', 'Nangere', 'Nguru', 'Potiskum', 'Tarmuwa', 'Yunusari', 'Yusufari'],
+                         Zamfara: ['Anka', 'Bakura', 'Birnin Magaji/Kiyaw', 'Bukkuyum', 'Bungudu', 'Gummi', 'Gusau', 'Kaura Namoda', 'Maradun', 'Maru', 'Shinkafi', 'Talata Mafara', 'Zurmi']
+                     };
+         
+                     // Check if the selected state has LGAs
+                     if (lgas[selectedState]) {
+                         lgas[selectedState].forEach(lga => {
+                             const option = document.createElement('option');
+                             option.value = lga;
+                             option.textContent = lga;
+                             lgaSelect.appendChild(option);
+                         });
+                     }
+                 }
+             </script>
+ 
+             <div class="location">
+               <map name="">
+ 
+               </map>
+                 
+             </div>
+        
+         </div>
+         <div>
+ 
+         </div>
+        </div>
+    </div>
+    <div class="no-use">
+ 
+    </div>
+    </div>
+ 
+    </div>
+ 
+        
+    <div class="page-content" data-page="2">
+   
+    </div>
+ 
+ 
+   
+    <!-- Add more page content as needed -->
+  </div>
+  
+  
+  <script>
+      // Get the pagination container and page boxes
+  const pagination = document.querySelector('.pagination');
+  const pageBoxes = document.querySelectorAll('.page-box');
+  
+  // Get the content container and page content
+  const content = document.querySelector('.content');
+  const pageContent = document.querySelectorAll('.page-content');
+  
+  // Add event listener to each page box
+  pageBoxes.forEach((pageBox, index) => {
+    pageBox.addEventListener('click', () => {
+      // Remove active class from all page boxes and page content
+      pageBoxes.forEach((box) => box.classList.remove('active'));
+      pageContent.forEach((content) => content.classList.remove('active'));
+  
+      // Add active class to the clicked page box and corresponding page content
+      pageBox.classList.add('active');
+      pageContent[index].classList.add('active');
+    });
+  });
+  </script>
+  
+ 
+
+
+
+
+   <script>
+    var amount = document.getElementById("quantity");
+    var show = document.getElementById("showw");
+    var button = document.getElementById("acc");
+   
+    button.addEventListener("click", function() {
+       // Get the current value from the input
+       var value = parseInt(amount.value);
+   
+       // Ensure the value is at least 1
+       if (value < 1) {
+           value = 1;
+       }
+   
+       // Limit the value to a single digit (0-9)
+       if (value > 100) {
+           value = 100; // Optional: you can choose to restrict to 9 or handle it differently
+       }
+   
+       // Create a new paragraph element or update the existing one
+       var newAmt = document.createElement("p");
+       newAmt.innerHTML = value;
+   
+       // Clear previous content and append the new amount
+       show.innerHTML = ""; // Clear previous content
+       show.appendChild(newAmt);
+   
+       // Clear the input field
+       amount.value = "";
+    });
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+</body>
+</html>

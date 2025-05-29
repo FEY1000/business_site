@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>user profile</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../css/seller-home-page.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/imp.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+ .profile-img img{
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: solid 1px black ;
+ }
+ .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 180px;
+ }
+ .profile-img{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+ .profile-content {
+    gap: 20px;
+ }
+
+
+
+
+
+
+
+
+
+
+ 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  height: auto;
+  gap: 20px;
+}
+
+.page-box {
+  width: 170px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 600;
+  flex-wrap: wrap;
+  background-color: rgba(128, 128, 128, 0.432);
+}
+
+.page-box.active {
+  background-color: #0055ff;
+  color: #fff;
+  width: 170px;
+  border-radius: 6px;
+  height: auto;
+  color: white;
+ 
+}
+
+.content {
+  padding: 20px;
+}
+
+.page-content {
+  display: none;
+  padding: 30px;
+}
+
+.page-content.active {
+  display: block;
+}
+
+
+
+
+.pagination{
+    position: relative;
+     top:  200px ;
+}
+.videos{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 16px;
+}
+.videos video{
+   width: 300px;
+   aspect-ratio: 1;
+}
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+    
+  <header>
+    <div class="logo"><div>
+        <img src="ICON WHITE.png"   class="logopic"></div> 
+        <div class="logoname">INFINITY MARKET PLACE</div>
+    </div>
+ 
+    <div class="left-header">
+        <ul>
+            <li><a href="./seller's-page-home.html">Home</a></li>
+            
+            <li><a href="./index.html">Store</a></li>
+            <li><a href="discovery.html">Discovery</a></li>
+            <li><a href="upgrade-plan.html">Upgrade Plan</a></li>
+            <li><a href="user-profile.html">Profile</a></li>
+            <li> <img class="picc" src="../img/6215524e7d3b34c0af4a4ce51e1fd997.jpg" alt=""> </li>
+           
+        </ul>
+    </div>
+</header>
+
+  <div class="menu-and-flag">
+      <div>
+          
+  <menu class="menuu">
+      <div class="right-menu">menu</div>
+      <div class="arrow"><i class="fa fa-angle-down" aria-hidden="true" id="angle-down"></i></div>
+      <div class="search-item"><input type="text" placeholder=" type to search"></div>
+  </menu>
+      </div>
+  
+      <div class="flag">
+     <img src="../img/flag-for-flag-nigeria.svg" alt="" style="width: 80px; aspect-ratio: 4/2;" >
+        
+      </div>
+  </div>
+  
+  
+  
+<div class="open-menu">
+  <div class="main-menu">
+      <div class="right-menu" style="text-align: center;">menu</div>
+      <div class="arrow"><i class="fa fa-angle-up" aria-hidden="true" id="angle-up"></i></div>
+      <div class="search-item"><input type="text" placeholder=" type to search"></div>
+  
+  </div>
+      
+  <div class="open-menu-list">
+      <div class="first-list">
+             <a class="up-list" href="top-rated.html">
+              <div class="list-icon">
+             
+  <i class="fa fa-line-chart" aria-hidden="true"></i>
+              </div>
+             <div class="list-name">
+                 Top rated
+              </div>
+             </a>
+             <a class="up-list" href="people's-choice.html" >
+              <div class="list-icon">
+             <img src="../img/check_ring_round_duotone_line.png" alt="">
+              </div>
+             <div class="list-name" style="color: blueviolet;">
+                 People's choice
+              </div>
+             </a>
+             <a class="up-list" href="top-brand.html">
+              <div class="list-icon">
+               <img src="../img/Star 1.png" alt="">
+              </div>
+             <div class="list-name">
+                 Top brands
+              </div>
+             </a>
+  
+          </div>
+  
+          <div class="categories">
+              <ul>
+                 <li><a href="#"><h4>CATEGORIES</h4></a></li>
+                 <li><a href="#">Wears</a></li>
+                 <li><a href="#">Electronics</a></li>
+                 <li><a href="#">Gadgets</a></li>
+                 <li><a href="#">home decor</a></li>
+                 <li><a href="#">Cosmetics</a></li>
+                 <li><a href="#">Beauty & wash</a></li>
+                
+              </ul>
+          </div>
+  
+          <div class="discovery">
+              <li><a href="discovery.html" id="dis">#DISCOVERY CONTENTS</a></li>
+              <li><a href="#">#Wears #Electronics</a></li>
+          </div>
+                 
+          <div class="first-list" style="margin-top: 25px;">
+        
+              <a class="up-list" href="analysis.html">
+               <div class="list-icon">
+               <img src="" alt="">##
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+             Analysis
+               </div>
+              </a>
+              <a class="up-list" href="upgrade-plan.html">
+               <div class="list-icon">
+               <img src="" alt="">##
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+             Upgrade Plan
+               </div>
+              </a>
+              <a class="up-list" href="order-list.html">
+               <div class="list-icon">
+               <img src="" alt="">##
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+              Sell
+               </div>
+              </a>
+              <a class="up-list" href="seller's-page-home.html">
+               <div class="list-icon">
+               <img src="" alt="">##
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+              Store
+               </div>
+              </a>
+              <a class="up-list" href="user-profile.html">
+               <div class="list-icon">
+               <img src="../img/home.png" alt="">
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+               Profile
+               </div>
+              </a>
+              <a class="up-list" href="transaction-seller.html">
+               <div class="list-icon">
+              <img src="../img/Paper_light.png" alt="">
+               </div>
+              <div class="list-name">
+                  History
+               </div>
+              </a>
+             
+   
+           </div>
+          <div class="first-list" style="margin-top: 30px;">
+                <h6>INFO</h6>
+              <a class="up-list" href="seller-chart.html">
+               <div class="list-icon">
+               <img src="../img/Chat_alt_3.png" alt="">
+               </div>
+              <div class="list-name">
+              chat
+               </div>
+              </a>
+              <a class="up-list" href="transaction-seller.html">
+               <div class="list-icon">
+               <img src="../img/Bell_pin.png" alt="">
+               </div>
+              <div class="list-name" style="color: blueviolet;">
+                  Notification
+               </div>
+              </a>
+   
+           </div>
+  
+           <div class="first-list" style="margin-top: 30px;">
+           <h6>ACCOUNT</h6>
+              <a class="up-list" href="switch-account.html">
+               <div class="list-icon">
+               <img src="../img/folder.png" alt="">
+               </div>
+              <div class="list-name">
+             Switch Account
+               </div>
+              </a>
+              <a class="up-list" href="#">
+               <div class="list-icon">
+               <img src="../img/folder.png" alt="">
+               </div>
+              <div class="list-name">
+                 Help
+               </div>
+              </a>
+   
+           </div>
+           <div class="first-list" style="margin-top: 60px;">
+          
+              <a class="up-list" href="#">
+               <div class="list-icon">
+             <img src="../img/cog.png" alt="">
+               </div>
+              <div class="list-name">
+           Setting
+               </div>
+              </a>
+              <a class="up-list" href="#">
+               <div class="list-icon">
+               <img src="../img/logout.png" alt="">
+               </div>
+              <div class="list-name">
+              Logout
+               </div>
+              </a>
+   
+           </div>
+  </div>
+  
+                  </div>
+
+
+
+ 
+    <div class="profile">
+        <div class="profile-img">
+             <div><img src="" alt=""></div>  <div class="username" style="font-size: small; font-weight: 500; color: rgb(19, 19, 154);">pwan limited/mr ajah</div>    
+            </div>
+        <div class="profile-content" style="display: flex;">
+            
+         <div class="like">likes <div style="text-align: center;">2</div>
+        </div>
+          
+        <div class="shop">products <div style="text-align: center;">4</div></div>
+         <div class="hhh">orders <div style="text-align: center; color: red;"><a href="#" style="text-decoration: none; color: red; font-weight: 600;";>5</a></div></div>
+
+        </div>
+
+    </div>
+
+
+
+       
+      <!-- Pagination container -->
+<div class="pagination">
+   <!-- Page boxes -->
+   <div class="page-box active" data-page="1">
+     
+          products
+   </div>
+ 
+   <div class="page-box" data-page="2">
+     videos
+   </div>
+ 
+ 
+   <!-- Add more page boxes as needed -->
+ </div>
+ 
+ <!-- Content container -->
+ <div class="content" style="position: relative; top: 160px;">
+   <!-- Page content will be displayed here -->
+   <div class="page-content active" data-page="1">
+      <div class="new-post"  style="height: 100vh; justify-content: center;">
+  
+         <div class="new-posting">
+           <div class="four-layer">
+               <div class="four-one">
+                    
+                   <div class="fifth">
+                       <div class="new-arr-vi-all">
+                           <div class="new-arriv">
+                               <div class="new-arr">New Product Post</div>
+                              
+                           </div>
+                           <div class="viieew"> View<span> </span><span>All</span></div>
+                       </div>
+                   </div> 
+           
+                   <div class="fourth">
+                       <div class="new-items">
+                          <img style="object-fit: cover;" src="../img/PHOTO-2023-12-16-19-00-27.jpg">
+                         <div class="product-name"  >Round neck white T</div>
+                  
+                          <p class="pro-des">Tripline limited edition overdose<br>
+                          round neck white Tshirt</p>
+                  
+                          <div class="pricee" >N18,000</div>
+                          <div class="buyy">Buy</div>
+                       </div>
+       
+                    
+                     </div>
+                   
+                   </div>
+            <div class="four-two">
+           
+            </div>
+               </div>
+         </div>
+       
+          <div class="posting-non">
+       
+          </div>
+       
+       
+       
+        </div>
+   </div>
+
+       
+   <div class="page-content" data-page="2">
+   <div class="videos">
+      <div class="video"><video src="The_Umbrella_Academy_720P_S04_EP01.mp4" autoplay controls muted></video></div>
+      
+      
+   </div>
+   </div>
+
+
+  
+   <!-- Add more page content as needed -->
+ </div>
+ 
+ 
+ <script>
+     // Get the pagination container and page boxes
+ const pagination = document.querySelector('.pagination');
+ const pageBoxes = document.querySelectorAll('.page-box');
+ 
+ // Get the content container and page content
+ const content = document.querySelector('.content');
+ const pageContent = document.querySelectorAll('.page-content');
+ 
+ // Add event listener to each page box
+ pageBoxes.forEach((pageBox, index) => {
+   pageBox.addEventListener('click', () => {
+     // Remove active class from all page boxes and page content
+     pageBoxes.forEach((box) => box.classList.remove('active'));
+     pageContent.forEach((content) => content.classList.remove('active'));
+ 
+     // Add active class to the clicked page box and corresponding page content
+     pageBox.classList.add('active');
+     pageContent[index].classList.add('active');
+   });
+ });
+ </script>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

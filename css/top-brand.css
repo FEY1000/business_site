@@ -1,0 +1,105 @@
+
+ .top-brand{
+    display: flex;
+    justify-content: center;
+    height: auto ;
+    width: 100%;
+    position: relative;
+   /*  top: 490px;*/
+   
+     
+ }
+
+ /*
+@media all and (max-width:800px) {
+   
+    .top-brand{
+        top: 900px;
+    }
+      }
+*/
+.show-brand{
+    display: flex;
+    justify-content: space-between;
+}
+     
+
+.hold-all-brands{
+    width: 95%;
+    height: 400px;
+    overflow-x: hidden;
+    margin: 40px 0; 
+    background-color: rgb(48, 104, 197);
+}
+.top-brand-header{
+    display: flex;
+    justify-content: center;
+}
+
+   .top-brand-header .show-brand{
+    display: flex;
+    
+    width: 100%;
+    background-color: white;
+    font-weight: 800;
+    padding: 8px;
+    margin: 8px;
+    
+    
+   }
+.top-brand-header-R span{
+    border-bottom: 2px solid black;
+}
+
+   
+.top-images{
+    display: flex;
+    padding-top: 40px;
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin: 0 40px; /* Center horizontally */
+}
+
+
+.images-top1 img,
+.images-top9 img ,
+.images-top2 img, 
+.images-top3 img, 
+.images-top4 img,
+.images-top5 img,
+.images-top6 img,
+.images-top7 img,
+.images-top8 img {
+    display: "inline-block";
+    height: 200px;
+    width: 200px;
+}
+
+
+.nike {
+  width: 95%;
+  padding: 10px;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  border: none;
+}
+
+#new-nike {
+  margin-bottom: 20px;
+}
+
+.font{
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
